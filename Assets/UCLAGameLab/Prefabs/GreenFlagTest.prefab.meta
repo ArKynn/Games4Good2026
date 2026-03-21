@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: d5be3214c30a40a41bfd40b7ca2e4ed1
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 11066
+  packageName: UCLA Mesh Creator
+  packageVersion: .8
+  assetPath: Assets/UCLAGameLab/Prefabs/GreenFlagTest.prefab
+  uploadId: 160031

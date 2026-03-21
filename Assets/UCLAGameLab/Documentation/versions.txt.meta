@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 455c05a7b01716b4786d12ad8755f0b8
+TextScriptImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 11066
+  packageName: UCLA Mesh Creator
+  packageVersion: .8
+  assetPath: Assets/UCLAGameLab/Documentation/versions.txt
+  uploadId: 160031
