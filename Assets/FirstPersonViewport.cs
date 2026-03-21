@@ -34,6 +34,8 @@ public class FirstPersonViewport : MonoBehaviour
     private GameObject lastSeenObjectGO;
     private Outline lastSeenObjectOutline;
 
+    public bool minigameActive = false;
+
     void Start()
     {
         Vector3 currentRotation = transform.localEulerAngles;
@@ -88,8 +90,10 @@ public class FirstPersonViewport : MonoBehaviour
     {
         lastSeenObjectGO = null;
 
+
+
         Ray ray = new Ray(transform.position, transform.forward);
-        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactableLayer))
+        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactableLayer) && !minigameActive)
         {
             if (hit.collider.TryGetComponent(out Interactable obj))
             {

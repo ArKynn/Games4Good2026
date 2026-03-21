@@ -3,18 +3,58 @@ using DG.Tweening;
 
 public class XRayGame : MonoBehaviour
 {
-
+    [SerializeField] private Transform cameraPosition;
+    private Vector3 originalCameraPosition;
     public bool active;
     [SerializeField] private GameObject instructionsUI;
     public void ActivateGame(bool toggle)
     {
         active = toggle;
-        if(instructionsUI != null)
-            instructionsUI.SetActive(toggle);
+        
 
         if(!toggle)
         {
             FirstPersonViewport.Instance.SetMovementActive(true);
+        }
+
+        // Make the vision cone increase from 0 to the original size if its to activate the game, and vice versa
+        if (toggle)
+        {
+            
+
+            FirstPersonViewport.Instance.minigameActive = true;
+            originalCameraPosition  = Camera.main.transform.position;
+            Camera.main.transform.DOMove(cameraPosition.position, 0.5f).SetEase(Ease.OutBack).onComplete += () =>
+            {
+                if (instructionsUI != null)
+                {
+                    instructionsUI.SetActive(true);
+                    instructionsUI.transform.localScale = Vector3.zero;
+                    instructionsUI.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
+                }
+            };
+            Camera.main.transform.DORotate(cameraPosition.eulerAngles, 0.5f).SetEase(Ease.OutBack);
+            visionCone.localScale = Vector3.zero;
+            visionCone.DOScale(originalVisionConeScale, 0.5f).SetEase(Ease.OutBack);
+        }
+        else
+        {
+
+            if(instructionsUI != null)
+            {
+                instructionsUI.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
+                {
+                    instructionsUI.SetActive(false);
+                });
+            }
+
+            
+            Camera.main.transform.DOMove(originalCameraPosition, 0.5f).SetEase(Ease.InBack).onComplete += () =>
+            {
+                FirstPersonViewport.Instance.minigameActive = false;
+            };
+
+            visionCone.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack);
         }
 
     }
@@ -34,6 +74,7 @@ public class XRayGame : MonoBehaviour
     [SerializeField] private float caseDuration = 5f;
 
     [SerializeField] private Transform visionCone;
+    private Vector3 originalVisionConeScale;
     [SerializeField] private BoxCollider2D visionCollider;
 
     [SerializeField] private Camera gameCamera;
@@ -44,6 +85,8 @@ public class XRayGame : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        originalVisionConeScale = visionCone.localScale;
+        visionCone.localScale = Vector3.zero; // Start with the vision cone hidden
         StartMovingCase();
     }
 
@@ -126,10 +169,6 @@ public class XRayGame : MonoBehaviour
             indexes[randomIndex] = temp;
         }
 
-        for (int i = 0; i < objectSlots.Length; i++)
-        {
-            Debug.Log("Slot " + i + ": " + indexes[i]);
-        }
 
         for (int i = 0; i < objectSlots.Length; i++)
         {
@@ -141,6 +180,9 @@ public class XRayGame : MonoBehaviour
             {
                 currentCaseObjects[i] = Instantiate(goodObjects[Random.Range(0, goodObjects.Length)], objectSlots[indexes[i]].position, Quaternion.identity, objectSlots[i]);
             }
+
+            currentCaseObjects[i].transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 360));
+            currentCaseObjects[i].GetComponent<SpriteRenderer>().sortingOrder = 1; // Ensure correct rendering order
         }
 
         caseParent.position = startPos.position;
