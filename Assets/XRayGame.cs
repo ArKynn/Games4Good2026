@@ -38,6 +38,9 @@ public class XRayGame : MonoBehaviour
 
     [SerializeField] private Camera gameCamera;
 
+    private bool isWrong = false;
+    [SerializeField] private SpriteRenderer background;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -77,9 +80,27 @@ public class XRayGame : MonoBehaviour
         visionCone.position = new Vector3(clampedX, clampedY, visionCone.position.z);
     }
 
+    public void CheckCase()
+    {
+        if (isWrong)
+        {
+            background.DOColor(Color.yellow, 0.3f).SetLoops(10, LoopType.Yoyo);
+            // Handle failure (e.g., show feedback, reset game, etc.)
+        }
+        else
+        {
+            background.DOColor(Color.red, 0.3f).SetLoops(10, LoopType.Yoyo);
+            // Handle success (e.g., show feedback, increase score, etc.)
+        }
+        
+
+    }
+
     public void StartMovingCase()
     {
         bool wrongCase = Random.value < wrongCaseChance;
+
+        isWrong = wrongCase;
 
         if (currentCaseObjects != null)
             foreach (XRayObject xRayObject in currentCaseObjects)
