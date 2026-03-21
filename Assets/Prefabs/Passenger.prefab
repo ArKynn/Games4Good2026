@@ -98,8 +98,9 @@ GameObject:
   - component: {fileID: 1235651629531446466}
   - component: {fileID: 3164889629383811814}
   - component: {fileID: 4535698114172358359}
-  - component: {fileID: 1171977593874906548}
-  m_Layer: 0
+  - component: {fileID: -356628035631687748}
+  - component: {fileID: -3659252598743878544}
+  m_Layer: 7
   m_Name: Passenger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,11 +132,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 4371018076328683132}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 7
+  m_Radius: 0.1
+  m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 240
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -156,8 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e4c769e8b21ad4bbeee408431a9cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxPatience: 60
-  _minPatience: 10
+  _maxPatience: 10
+  _minPatience: 5
 --- !u!114 &4535698114172358359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,8 +171,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df93d2a7eae646b4beec2a999618a840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &1171977593874906548
-BoxCollider:
+--- !u!54 &-356628035631687748
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4371018076328683132}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &-3659252598743878544
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -185,9 +213,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.99, z: 1}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

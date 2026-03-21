@@ -5,12 +5,16 @@ using UnityEngine.AI;
 public class PassengerAgentController : MonoBehaviour
 {
     private NavMeshAgent _agent;
+    private Passenger _passenger;
     private AllPassengerController _agentController;
+    
+    public Passenger Passenger => _passenger;
     
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
-        _agentController = GetComponent<AllPassengerController>();
+        _passenger = GetComponent<Passenger>();
+        _agentController = FindFirstObjectByType<AllPassengerController>();
     }
 
     public void MoveToWaypoint(Waypoint destination)

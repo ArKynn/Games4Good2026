@@ -6,8 +6,8 @@ public class Passenger : MonoBehaviour
     private float _patience = 0;
     public float Patience => _patience;
     
-    [SerializeField] private float _maxPatience = 60f;
-    [SerializeField] private float _minPatience = 10f;
+    [SerializeField] private float _maxPatience = 10f;
+    [SerializeField] private float _minPatience = 5f;
     
     private bool isLosingPatience = false;
     
@@ -15,6 +15,7 @@ public class Passenger : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _agentController = GetComponent<PassengerAgentController>();
         RandomizePatience();
     }
 
@@ -41,6 +42,12 @@ public class Passenger : MonoBehaviour
         {
             _agentController.GoToDespawn();
             // Notify game strike manager with +1 strike
+            ToggleLosingPatience();
         }
+    }
+
+    public void StartLosingPatience()
+    {
+        ToggleLosingPatience();
     }
 }

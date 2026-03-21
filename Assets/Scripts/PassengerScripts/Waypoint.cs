@@ -5,31 +5,47 @@ public class Waypoint : MonoBehaviour
 {
     private bool _isEmpty = true;
     public bool IsEmpty => _isEmpty;
-    
+
     public Vector3 Position => transform.position;
-    public PassengerAgentController PassengerAgentController { get; private set; }
-    
+    public PassengerAgentController ConnectedAgentController { get; private set; }
+
     public event EventHandler OnWaypointEnter;
     public event EventHandler OnWaypointExit;
-    
-    private void OnTriggerEnter(Collider other)
+
+    protected void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent(typeof(PassengerAgentController)) != null)
+        if (other.GetComponent(typeof(Passenger)) != null)
         {
-            PassengerAgentController = other.GetComponent(typeof(PassengerAgentController)) as PassengerAgentController;
-            
+
+            ConnectedAgentController = other.GetComponent(typeof(PassengerAgentController)) as PassengerAgentController;
+
             _isEmpty = false;
-            OnWaypointEnter?.Invoke(this ,EventArgs.Empty);
+            OnWaypointEnter?.Invoke(this, EventArgs.Empty);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent(typeof(PassengerAgentController)) != null)
+        if (other.GetComponent(typeof(Passenger)) != null && CheckActiveCollisions())
         {
-            PassengerAgentController = null;
+            ConnectedAgentController = null;
             _isEmpty = true;
             OnWaypointExit?.Invoke(this, EventArgs.Empty);
         }
+    }
+
+    public void SetEmpty(bool state)
+    {
+        _isEmpty = state;
+    }
+
+    public void SetConnectedAgent(PassengerAgentController agentController)
+    {
+        ConnectedAgentController = agentController;
+    }
+
+    public bool CheckActiveCollisions()
+    {
+        return Physics.OverlapBox(gameObject.transform.position, Vector3.one, Quaternion.identity).Length == 4;
     }
 }

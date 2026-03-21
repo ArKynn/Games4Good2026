@@ -19,14 +19,20 @@ namespace PassengerScripts
         [SerializeField] private float _spawnFrequency;
         private float _spawnTimer = 0;
         private int _checkpointTimerChecks = 0;
+        
+        private bool _checkpointOccupied = false;
 
         private Queue<PassengerAgentController> _lineAgents;
 
         void Start()
         {
             _lineAgents = new Queue<PassengerAgentController>(_lineWaypoints.Count);
-            
+
+            _checkpointWaypoint.OnWaypointEnter += StartNpcPatience;
             _checkpointWaypoint.OnWaypointExit += CheckpointGetNextPassenger;
+            _checkpointWaypoint.OnWaypointExit += TryClearCheckpointOccupied;
+            
+            _NPCEndWaypoint.OnWaypointEnter += DeleteOOBNPC;
         }
 
         void Update()
@@ -38,7 +44,11 @@ namespace PassengerScripts
                 _checkpointTimerChecks++;
                 if(_checkpointTimerChecks > 1)
                 {
-                    if(_checkpointWaypoint.IsEmpty) CheckpointGetNextPassenger(this, EventArgs.Empty);
+                    if (_checkpointWaypoint.IsEmpty)
+                    {
+                        CheckpointGetNextPassenger(this, EventArgs.Empty);
+                        
+                    }
                     _checkpointTimerChecks = 0;
                 }
                 _spawnTimer = 0;
@@ -60,11 +70,13 @@ namespace PassengerScripts
         private void CheckpointGetNextPassenger(object sender, EventArgs args)
         {
             _lineAgents.TryPeek(out var tempAgent);
-            if (tempAgent != null)
+            if (tempAgent != null && !_checkpointOccupied)
             {
                 tempAgent.MoveToWaypoint(CheckpointWaypoint);
                 _lineAgents.Dequeue();
                 UpdateLine(this, EventArgs.Empty);
+                _checkpointTimerChecks = 0;
+                _checkpointOccupied = true;
             }
         }
 
@@ -72,6 +84,25 @@ namespace PassengerScripts
         {
             _lineAgents.Enqueue(Instantiate(_passengerPrefab, _spawnWaypoint.transform.position, Quaternion.identity).GetComponent<PassengerAgentController>());
             UpdateLine(this, EventArgs.Empty);
+        }
+
+        private void StartNpcPatience(object sender, EventArgs args)
+        {
+            CheckpointWaypoint.ConnectedAgentController.Passenger.StartLosingPatience();
+        }
+
+        private void DeleteOOBNPC(object sender, EventArgs args)
+        {
+            Destroy(_NPCEndWaypoint.ConnectedAgentController.gameObject);
+            _NPCEndWaypoint.SetEmpty(true);
+            _NPCEndWaypoint.SetConnectedAgent(null);
+            
+        }
+
+        private void TryClearCheckpointOccupied(object sender, EventArgs args)
+        {
+            if(!_checkpointWaypoint.CheckActiveCollisions())
+                _checkpointOccupied = false;
         }
     }
 }
