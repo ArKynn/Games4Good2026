@@ -12,9 +12,12 @@ namespace PassengerScripts
         [SerializeField] private List<Waypoint> _lineWaypoints;
         [SerializeField] private Waypoint _checkpointWaypoint; 
         [SerializeField] private Waypoint _NPCEndWaypoint;
+        [SerializeField] private Waypoint _RejectedNPCEndWaypoint;
         
         public Waypoint CheckpointWaypoint => _checkpointWaypoint;
         public Waypoint NPCEndWaypoint => _NPCEndWaypoint;
+        public Waypoint RejectedNPCEndWaypoint => _RejectedNPCEndWaypoint;
+        public Waypoint SpawnWaypoint => _spawnWaypoint;
 
         [SerializeField] private float _spawnFrequency;
         private float _spawnTimer = 0;
@@ -33,6 +36,7 @@ namespace PassengerScripts
             _checkpointWaypoint.OnWaypointExit += CheckpointGetNextPassenger;
             
             _NPCEndWaypoint.OnWaypointEnter += DeleteOOBNPC;
+            _RejectedNPCEndWaypoint.OnWaypointEnter += DeleteAltOOBNPC;
         }
 
         void Update()
@@ -82,7 +86,10 @@ namespace PassengerScripts
 
         private void SpawnNewPassenger()
         {
-            _lineAgents.Enqueue(Instantiate(_passengerPrefab, _spawnWaypoint.transform.position, Quaternion.identity).GetComponent<PassengerAgentController>());
+            var temp = Instantiate(_passengerPrefab, _spawnWaypoint.transform.position, Quaternion.identity)
+                .GetComponent<PassengerAgentController>();
+            temp.SetAllPassengerController(this);
+            _lineAgents.Enqueue(temp);
             UpdateLine(this, EventArgs.Empty);
         }
 
@@ -94,6 +101,13 @@ namespace PassengerScripts
         private void DeleteOOBNPC(object sender, EventArgs args)
         {
             Destroy(_NPCEndWaypoint.ConnectedAgentController.gameObject);
+            _NPCEndWaypoint.SetEmpty(true);
+            _NPCEndWaypoint.SetConnectedAgent(null);
+            
+        }
+        private void DeleteAltOOBNPC(object sender, EventArgs args)
+        {
+            Destroy(_RejectedNPCEndWaypoint.ConnectedAgentController.gameObject);
             _NPCEndWaypoint.SetEmpty(true);
             _NPCEndWaypoint.SetConnectedAgent(null);
             
