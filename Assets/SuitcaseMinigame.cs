@@ -122,6 +122,7 @@ public class SuitcaseMinigame : MonoBehaviour
     {
         if (puffEffect)
         {
+            currentCase.CheckCase();
             // 1. Scale the current case to zero
             currentCase.transform.DOScale(Vector3.one * 0.1f, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
             {
