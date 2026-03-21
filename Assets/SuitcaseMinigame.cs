@@ -13,6 +13,7 @@ public class SuitcaseMinigame : MonoBehaviour
     [Header("Physics Drag Settings")]
     [SerializeField] private LayerMask draggableLayer;
     [SerializeField] private float dragSpeed = 12f;
+    [SerializeField] private int lidLayer;
 
     [Header("Scroll & Rotate Settings")]
     [SerializeField] private float scrollSpeed = 2f;
@@ -24,7 +25,11 @@ public class SuitcaseMinigame : MonoBehaviour
     private float _dragDepth;
     private Vector3 _grabOffset;
     private bool _isCaseLead;
-    private bool _isRotating; // Track if RMB is held
+    private bool _isLid;
+    private bool _isRotating;
+
+    [SerializeField] private SuitCase suitCase;
+    [SerializeField] private Transform suitCaseSpawnPos;
 
     public void ActivateGame(bool toggle)
     {
@@ -66,6 +71,11 @@ public class SuitcaseMinigame : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        SpawnSuitCase();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && active)
@@ -78,19 +88,28 @@ public class SuitcaseMinigame : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) TryGrab();
         if (Input.GetMouseButtonUp(0)) Release();
 
-        if (_grabbedRb != null && !_isCaseLead)
+        if (_grabbedRb != null && !_isCaseLead && !_isLid)
         {
-            // --- SCROLL LOGIC ---
             float scroll = Input.GetAxis("Mouse ScrollWheel");
             if (Mathf.Abs(scroll) > 0.01f)
             {
                 _dragDepth = Mathf.Clamp(_dragDepth + (scroll * scrollSpeed), minScrollDistance, maxScrollDistance);
             }
 
-            // --- ROTATION TOGGLE ---
-            // Only allow rotation if it's not the Case Lead
             _isRotating = Input.GetMouseButton(1);
         }
+    }
+
+    public void SpawnSuitCase()
+    {
+        SuitCase spawnedCase = Instantiate(suitCase, suitCaseSpawnPos.position, Quaternion.identity);
+        spawnedCase.transform.eulerAngles = new Vector3(0, -90f, 0);
+
+        spawnedCase.GetComponentInChildren<Interactable>().onInteract.AddListener(() =>
+        {
+            ActivateGame(true);
+        });
+        spawnedCase.SpawnSuitCase(suitCaseSpawnPos.position);
     }
 
     void FixedUpdate()
@@ -122,9 +141,12 @@ public class SuitcaseMinigame : MonoBehaviour
             if (_grabbedRb != null)
             {
                 _isCaseLead = _grabbedRb.GetComponent<TAG_CaseLead>() != null;
+                _isLid = hit.collider.gameObject.layer == lidLayer;
+
                 _dragDepth = Vector3.Distance(Camera.main.transform.position, hit.point);
                 _grabOffset = _grabbedRb.transform.position - hit.point;
 
+                // --- GRAVITY DISABLED HERE ---
                 _grabbedRb.useGravity = false;
                 _grabbedRb.linearDamping = damping;
                 _grabbedRb.angularDamping = damping;
@@ -149,13 +171,9 @@ public class SuitcaseMinigame : MonoBehaviour
 
     private void HandleRotation()
     {
-        // Stop movement while rotating so it doesn't drift away
         _grabbedRb.linearVelocity = Vector3.zero;
-
         float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
         float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed;
-
-        // Rotate relative to the Camera's up and right axes for intuitive feel
         _grabbedRb.AddTorque(Camera.main.transform.up * -mouseX, ForceMode.VelocityChange);
         _grabbedRb.AddTorque(Camera.main.transform.right * mouseY, ForceMode.VelocityChange);
     }
@@ -164,19 +182,22 @@ public class SuitcaseMinigame : MonoBehaviour
     {
         if (_grabbedRb != null)
         {
+            // --- GRAVITY RE-ENABLED HERE ---
             _grabbedRb.useGravity = true;
+
             _grabbedRb.linearDamping = 0.05f;
             _grabbedRb.angularDamping = 0.05f;
 
+            // Optional: Freeze the Case Lead if it's sitting still to prevent jitters
             if (_grabbedRb.linearVelocity.magnitude < 0.5f && _isCaseLead)
             {
                 _grabbedRb.linearVelocity = Vector3.zero;
                 _grabbedRb.angularVelocity = Vector3.zero;
-
             }
 
             _grabbedRb = null;
             _isCaseLead = false;
+            _isLid = false;
             _isRotating = false;
         }
     }

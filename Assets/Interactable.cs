@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private UnityEvent onInteract;
+    [SerializeField] public UnityEvent onInteract;
 
     private Outline outline;
 
