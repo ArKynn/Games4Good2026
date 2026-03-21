@@ -232,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 40606273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16, y: 0, z: 1}
+  m_LocalPosition: {x: -25, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -380,6 +380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1866439509}
   - {fileID: 542756443}
   - {fileID: 40606274}
   - {fileID: 1553110691}
@@ -402,11 +403,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb30f52b3c8bdb419305fc002169db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraPosition: {fileID: 1866439509}
   active: 0
   instructionsUI: {fileID: 0}
-  startPos: {fileID: 40606274}
-  endPos: {fileID: 1553110691}
-  wrongCaseChance: 0.2
+  startPos: {fileID: 1553110691}
+  endPos: {fileID: 40606274}
+  wrongCaseChance: 0.3
   caseParent: {fileID: 1127414989}
   objectSlots:
   - {fileID: 882061247}
@@ -423,9 +425,11 @@ MonoBehaviour:
   - {fileID: 5854086}
   - {fileID: 1939134705}
   goodObjects:
-  - {fileID: 198090359366740994, guid: 120dc71b927a73a4b95427047e7dd621, type: 3}
-  wrongObjects:
   - {fileID: 3947237177488730724, guid: ea355d8da1afc7d4b8d1153aa0000651, type: 3}
+  - {fileID: 3947237177488730724, guid: ea3187219b0af3e4eb820623dbf38c95, type: 3}
+  wrongObjects:
+  - {fileID: 198090359366740994, guid: 120dc71b927a73a4b95427047e7dd621, type: 3}
+  - {fileID: 198090359366740994, guid: ae9763ba3daa84e4cac01d55bb035bad, type: 3}
   caseDuration: 20
   visionCone: {fileID: 562502435}
   visionCollider: {fileID: 1368597156}
@@ -509,7 +513,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5169811, g: 0.5169811, b: 0.5169811, a: 1}
+  m_Color: {r: 0.08627451, g: 0.08627451, b: 0.08627451, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -826,7 +830,7 @@ GameObject:
   - component: {fileID: 562502436}
   - component: {fileID: 562502437}
   m_Layer: 0
-  m_Name: Vision
+  m_Name: Vision Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -842,7 +846,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.67, y: -0.16, z: 1}
-  m_LocalScale: {x: 3.9999998, y: 3.9999998, z: 3.9999998}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 279942352}
@@ -957,6 +961,37 @@ SpriteMask:
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
   m_MaskSource: 0
+--- !u!1 &748278762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748278763}
+  m_Layer: 0
+  m_Name: Camera Default Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748278763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748278762}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.43, z: -2.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &761076219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +1987,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
+  minigameActive: 0
 --- !u!1 &1553110690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,7 +2014,7 @@ Transform:
   m_GameObject: {fileID: 1553110690}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.71, y: 0, z: 1}
+  m_LocalPosition: {x: 16, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2784,6 +2820,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1866439508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1866439509}
+  m_Layer: 0
+  m_Name: X-Ray Camera Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1866439509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866439508}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.048095778, y: -0, z: -0, w: 0.9988428}
+  m_LocalPosition: {x: 50.56, y: 16.68, z: 14.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 279942352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1898404646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3378,7 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 748278763}
   - {fileID: 1551909825}
   - {fileID: 1660692145}
   - {fileID: 1361405454}
