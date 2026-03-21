@@ -345,6 +345,11 @@ MonoBehaviour:
   - {fileID: 4003444564434326344, guid: 06a7ce4737e9e694291f6eae6c909aac, type: 3}
   - {fileID: -2421761707884505528, guid: ff1df50bd35a10d4696641dda425b22a, type: 3}
   - {fileID: -6570061259019497718, guid: 5c8cd50fc7416d446a9128fd72cc03ec, type: 3}
+  - {fileID: -6270458237603694639, guid: efa9c9120ac85a8469ca480c77b4874f, type: 3}
+  - {fileID: 4003444564434326344, guid: f78deb979a5b4a44f8ab5480bb764e9b, type: 3}
+  - {fileID: 4003444564434326344, guid: f9b6a0eb57914244d9242c92784c68e0, type: 3}
+  - {fileID: -6270458237603694639, guid: 3cb69e0ac34eafa45870400bf82a1e1b, type: 3}
+  - {fileID: -6270458237603694639, guid: 3eec3780743b7c9438eb866e81ef1e42, type: 3}
   numberOfBadItems: 0
 --- !u!1 &1758962329782674831
 GameObject:
@@ -551,8 +556,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9999998, y: 0.35657617, z: 1}
-  m_Center: {x: 0, y: 0.10665097, z: 0}
+  m_Size: {x: 0.9999999, y: 0.35657626, z: 0.7256811}
+  m_Center: {x: 0, y: 0.106650986, z: -0.13715899}
 --- !u!1 &5976823418392254734
 GameObject:
   m_ObjectHideFlags: 0
