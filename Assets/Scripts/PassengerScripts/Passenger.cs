@@ -3,6 +3,7 @@ using UnityEngine;
 public class Passenger : MonoBehaviour
 {
     [SerializeField] private GameObject _passportHolder;
+    [SerializeField] private GameObject _luggageHolder;
     private PassengerAgentController _agentController;
     private float _patience = 0;
     public float Patience => _patience;
@@ -62,5 +63,10 @@ public class Passenger : MonoBehaviour
         Passport.transform.localPosition = Vector3.zero;
         Passport.transform.localRotation = Quaternion.identity;
         IsPassportCorrect = isCorrect;
+    }
+
+    public void AddLuggage(GameObject luggage)
+    {
+        Instantiate(luggage, _luggageHolder.transform);
     }
 }
