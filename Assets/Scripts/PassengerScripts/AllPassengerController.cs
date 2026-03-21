@@ -82,7 +82,10 @@ namespace PassengerScripts
 
         private void SpawnNewPassenger()
         {
-            _lineAgents.Enqueue(Instantiate(_passengerPrefab, _spawnWaypoint.transform.position, Quaternion.identity).GetComponent<PassengerAgentController>());
+            var temp = Instantiate(_passengerPrefab, _spawnWaypoint.transform.position, Quaternion.identity)
+                .GetComponent<PassengerAgentController>();
+            temp.SetAllPassengerController(this);
+            _lineAgents.Enqueue(temp);
             UpdateLine(this, EventArgs.Empty);
         }
 

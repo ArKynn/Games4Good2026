@@ -14,7 +14,6 @@ public class PassengerAgentController : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         _passenger = GetComponent<Passenger>();
-        _agentController = FindFirstObjectByType<AllPassengerController>();
     }
 
     public void MoveToWaypoint(Waypoint destination)
@@ -27,5 +26,10 @@ public class PassengerAgentController : MonoBehaviour
     public void GoToDespawn()
     {
         MoveToWaypoint(_agentController.NPCEndWaypoint);
+    }
+
+    public void SetAllPassengerController(AllPassengerController agentController)
+    {
+        if(_agentController == null) _agentController = agentController;
     }
 }
