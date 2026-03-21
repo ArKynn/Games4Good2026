@@ -2,28 +2,38 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
+    [Header("Detection Settings")]
+    [SerializeField] private LayerMask detectionLayer; // Set this to "Items" or "Suitcase" in Inspector
+
     [Header("Spawn Settings")]
     [SerializeField] private Transform respawnPoint;
 
     private void OnTriggerEnter(Collider other)
     {
-        // 1. Try to find a Rigidbody (works for your items and suitcase)
-        Rigidbody rb = other.GetComponent<Rigidbody>();
-
-        if (rb != null)
+        // Check if the object's layer is included in our LayerMask
+        if (((1 << other.gameObject.layer) & detectionLayer) != 0)
         {
-            // 2. Move the object
-            rb.transform.position = respawnPoint.position;
-            rb.transform.rotation = respawnPoint.rotation;
+            // 1. Try to find a Rigidbody
+            Rigidbody rb = other.GetComponent<Rigidbody>();
 
-            // 3. IMPORTANT: Reset velocity so it doesn't keep falling/spinning
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-        }
-        else
-        {
-            // If it's a simple object without physics, just move the transform
-            other.transform.position = respawnPoint.position;
+            if (rb != null)
+            {
+                // 2. Move and Reset Physics
+                rb.transform.position = respawnPoint.position;
+                rb.transform.rotation = respawnPoint.rotation;
+
+                // Reset velocities so it doesn't "carry" the fall speed to the new spot
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
+            else
+            {
+                // 3. Fallback for non-physics objects
+                other.transform.position = respawnPoint.position;
+                other.transform.rotation = respawnPoint.rotation;
+            }
+
+            Debug.Log($"<color=red>DeathZone:</color> Respawned {other.gameObject.name}");
         }
     }
 }

@@ -165,7 +165,7 @@ public class SuitcaseMinigame : MonoBehaviour
     public void SpawnSuitCase()
     {
         SuitCase spawnedCase = Instantiate(suitCase, suitCaseSpawnPos.position, Quaternion.identity);
-        spawnedCase.transform.eulerAngles = new Vector3(0, -90f, 0);
+        spawnedCase.transform.eulerAngles = new Vector3(0, 90f, 0);
 
         currentCase = spawnedCase;
 
