@@ -12,7 +12,7 @@ public class XRayGame : MonoBehaviour
     private bool buttonClicked = false;
     public void ActivateGame(bool toggle)
     {
-        active = toggle;
+        
         
 
         if(!toggle)
@@ -31,6 +31,7 @@ public class XRayGame : MonoBehaviour
             {
                 if (instructionsUI != null)
                 {
+                    active = toggle;
                     instructionsUI.SetActive(true);
                     instructionsUI.transform.localScale = Vector3.zero;
                     instructionsUI.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
@@ -42,8 +43,8 @@ public class XRayGame : MonoBehaviour
         }
         else
         {
-
-            if(instructionsUI != null)
+            active = toggle;
+            if (instructionsUI != null)
             {
                 instructionsUI.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
                 {

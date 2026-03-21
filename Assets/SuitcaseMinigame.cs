@@ -45,7 +45,7 @@ public class SuitcaseMinigame : MonoBehaviour
 
     public void ActivateGame(bool toggle)
     {
-        active = toggle;
+        
         if (toggle)
         {
             FirstPersonViewport.Instance.minigameActive = true;
@@ -57,6 +57,7 @@ public class SuitcaseMinigame : MonoBehaviour
             {
                 if (instructionsUI != null)
                 {
+                    active = toggle;
                     instructionsUI.SetActive(true);
                     instructionsUI.transform.localScale = Vector3.zero;
                     instructionsUI.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
@@ -66,6 +67,7 @@ public class SuitcaseMinigame : MonoBehaviour
         }
         else
         {
+            active = toggle;
             FirstPersonViewport.Instance.minigameActive = false;
             Release();
             if (instructionsUI != null)
