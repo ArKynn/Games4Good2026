@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Passenger : MonoBehaviour
 {
+    private PassengerAgentController _agentController;
     private float _patience = 0;
     public float Patience => _patience;
     
@@ -38,7 +39,7 @@ public class Passenger : MonoBehaviour
         _patience -= Time.deltaTime;
         if (_patience <= 0f)
         {
-            // Skip line and go away
+            _agentController.GoToDespawn();
             // Notify game strike manager with +1 strike
         }
     }
