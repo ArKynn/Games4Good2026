@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,6 @@ TagManager:
   - Draggable
   - SuitcaseLid
   - Ignore PostProcessing
-  - 
   - 
   - 
   - 

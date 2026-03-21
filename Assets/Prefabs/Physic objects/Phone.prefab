@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6578907798172415820}
   - component: {fileID: -6270458237603694639}
   m_Layer: 9
-  m_Name: Boxer Physics Prefab 1
+  m_Name: Phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4432455212582662443}
-  m_Mesh: {fileID: 4300000, guid: f06e4e8dfcc3169429a99ab3b56e5dee, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 9888eb653f76133449ff6b7ea2311d3b, type: 2}
 --- !u!23 &6033977905717280713
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cf074ebeea1d4c34687ce10a3ca306e8, type: 2}
+  - {fileID: 2100000, guid: 29218097fd9e7124bbc8eda2c9b6360e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
