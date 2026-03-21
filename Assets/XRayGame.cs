@@ -102,7 +102,7 @@ public class XRayGame : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Escape) && active)
+        if(Input.GetKeyDown(KeyCode.Q) && active)
         {
             ActivateGame(false);
         }
