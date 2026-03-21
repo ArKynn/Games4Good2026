@@ -192,8 +192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _passportHolder: {fileID: 1883590299962392289}
   _luggageHolder: {fileID: 6444824371986741800}
-  _maxPatience: 10
-  _minPatience: 5
+  _maxPatience: 120
+  _minPatience: 60
 --- !u!114 &4535698114172358359
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -104,9 +104,6 @@ public class SuitcaseMinigame : MonoBehaviour
             if(currentCase.CheckCase())
             {
                 Debug.Log("Case passed! Proceeding to next case...");
-                
-                // You can add logic here to proceed to the next case or end the minigame
-
             }
             else
             {

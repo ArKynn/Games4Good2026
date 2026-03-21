@@ -20,6 +20,8 @@ public class SuitcaseController : MonoBehaviour
 
     private void OnPassengerWaiting(object sender, EventArgs e)
     {
+        _waitingPassengerController = _passengerController.CheckpointWaypoint.ConnectedAgentController;
+        _waitingPassenger = _waitingPassengerController.GetComponent<Passenger>();
         _suitcaseMinigame.SpawnSuitCase();
     }
 
