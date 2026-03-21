@@ -107,7 +107,7 @@ public class FirstPersonViewport : MonoBehaviour
                     }
 
                     lastSeenObjectGO = hit.collider.gameObject;
-                    lastSeenObjectOutline = hit.collider.GetComponent<Outline>();
+                    lastSeenObjectOutline = hit.collider.GetComponent<Interactable>().outline;
 
                     if (lastSeenObjectOutline != null)
                         lastSeenObjectOutline.enabled = true; // Highlight the object
