@@ -11,11 +11,13 @@ public class PassportController : MonoBehaviour
     private PassportGenerator passportGenerator;
     private Passenger _waitingPassenger;
     private PassengerAgentController _waitingPassengerController;
+    private StrikeManager _strikeManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         passportGenerator = GetComponent<PassportGenerator>();
+        _strikeManager = FindFirstObjectByType<StrikeManager>();
         _passengerController.SpawnWaypoint.OnWaypointEnter += OnNewPassenger;
         _passengerController.CheckpointWaypoint.OnWaypointEnter += OnPassengerWaiting;
         _passengerController.CheckpointWaypoint.OnWaypointExit += OnPassengerExit;
@@ -73,7 +75,7 @@ public class PassportController : MonoBehaviour
     {
         if (decision != expectedDecision)
         {
-            //Notify Strike manager with +1 strike
+            _strikeManager.AddStrike();
         }
     }
 

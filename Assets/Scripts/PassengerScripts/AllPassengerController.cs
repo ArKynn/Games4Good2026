@@ -26,9 +26,12 @@ namespace PassengerScripts
         private bool _checkpointOccupied = false;
 
         private Queue<PassengerAgentController> _lineAgents;
+        private StrikeManager _strikeManager;
 
         void Start()
         {
+            _strikeManager = FindFirstObjectByType<StrikeManager>();
+            
             _lineAgents = new Queue<PassengerAgentController>(_lineWaypoints.Count);
 
             _checkpointWaypoint.OnWaypointEnter += StartNpcPatience;
@@ -117,6 +120,11 @@ namespace PassengerScripts
         {
             if(!_checkpointWaypoint.CheckActiveCollisions())
                 _checkpointOccupied = false;
+        }
+
+        public void LostPatience()
+        {
+            _strikeManager.AddStrike();
         }
     }
 }
