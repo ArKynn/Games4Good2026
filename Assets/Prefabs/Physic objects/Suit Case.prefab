@@ -350,6 +350,9 @@ MonoBehaviour:
   - {fileID: 4003444564434326344, guid: f9b6a0eb57914244d9242c92784c68e0, type: 3}
   - {fileID: -6270458237603694639, guid: 3cb69e0ac34eafa45870400bf82a1e1b, type: 3}
   - {fileID: -6270458237603694639, guid: 3eec3780743b7c9438eb866e81ef1e42, type: 3}
+  - {fileID: -6270458237603694639, guid: 6af126fd816cfd54591d1e29926875af, type: 3}
+  - {fileID: -6270458237603694639, guid: 52e8b62eb66a5d34598f003998edd03a, type: 3}
+  - {fileID: -6270458237603694639, guid: 19c91284b59058440b606c8dabce29c8, type: 3}
   numberOfBadItems: 0
 --- !u!1 &1758962329782674831
 GameObject:
