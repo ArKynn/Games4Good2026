@@ -16,6 +16,7 @@ TagManager:
   - Waypoint
   - Draggable
   - SuitcaseLid
+  - Ignore PostProcessing
   - 
   - 
   - 
