@@ -136,7 +136,7 @@ public class SuitcaseMinigame : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && active)
+        if (Input.GetKeyDown(KeyCode.Q) && active)
         {
             ActivateGame(false);
         }
