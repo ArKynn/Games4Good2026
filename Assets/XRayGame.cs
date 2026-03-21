@@ -169,10 +169,6 @@ public class XRayGame : MonoBehaviour
             indexes[randomIndex] = temp;
         }
 
-        for (int i = 0; i < objectSlots.Length; i++)
-        {
-            Debug.Log("Slot " + i + ": " + indexes[i]);
-        }
 
         for (int i = 0; i < objectSlots.Length; i++)
         {
