@@ -29,8 +29,8 @@ namespace PassengerScripts
             _lineAgents = new Queue<PassengerAgentController>(_lineWaypoints.Count);
 
             _checkpointWaypoint.OnWaypointEnter += StartNpcPatience;
-            _checkpointWaypoint.OnWaypointExit += CheckpointGetNextPassenger;
             _checkpointWaypoint.OnWaypointExit += TryClearCheckpointOccupied;
+            _checkpointWaypoint.OnWaypointExit += CheckpointGetNextPassenger;
             
             _NPCEndWaypoint.OnWaypointEnter += DeleteOOBNPC;
         }

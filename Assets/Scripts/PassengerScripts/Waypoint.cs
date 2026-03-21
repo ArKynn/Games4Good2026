@@ -26,7 +26,7 @@ public class Waypoint : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent(typeof(Passenger)) != null && CheckActiveCollisions())
+        if (other.GetComponent(typeof(Passenger)) != null && !CheckActiveCollisions())
         {
             ConnectedAgentController = null;
             _isEmpty = true;
@@ -46,6 +46,6 @@ public class Waypoint : MonoBehaviour
 
     public bool CheckActiveCollisions()
     {
-        return Physics.OverlapBox(gameObject.transform.position, Vector3.one, Quaternion.identity).Length == 4;
+        return Physics.OverlapBox(gameObject.transform.position, new Vector3(0.25f, 0.25f, 0.25f), Quaternion.identity).Length >= 4;
     }
 }
