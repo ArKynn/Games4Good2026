@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class SuitcaseMinigame : MonoBehaviour
 {
@@ -29,7 +30,10 @@ public class SuitcaseMinigame : MonoBehaviour
     private bool _isRotating;
 
     [SerializeField] private SuitCase suitCase;
+    private SuitCase currentCase;
     [SerializeField] private Transform suitCaseSpawnPos;
+
+    [SerializeField] private GameObject puffEffect;
 
     public void ActivateGame(bool toggle)
     {
@@ -76,6 +80,64 @@ public class SuitcaseMinigame : MonoBehaviour
         SpawnSuitCase();
     }
 
+
+    public void DecreaseBadItem()
+    {
+        if (currentCase != null)
+        {
+            currentCase.numberOfBadItems -= 1;
+            if(currentCase.numberOfBadItems <= 0)
+            {
+                currentCase.numberOfBadItems = 0;
+                Debug.Log("No more bad items");
+            }
+        }
+
+    }
+    public void CheckCurrentCase()
+    {
+        if (currentCase != null)
+        {
+            if(currentCase.CheckCase())
+            {
+                Debug.Log("Case passed! Proceeding to next case...");
+                
+                // You can add logic here to proceed to the next case or end the minigame
+
+            }
+            else
+            {
+                Debug.Log("Case failed! Try again.");
+
+                // You can add logic here to reset the current case or give feedback to the player
+            }
+        }
+
+        if (puffEffect)
+        {
+            // 1. Scale the current case to zero
+            currentCase.transform.DOScale(Vector3.one * 0.1f, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
+            {
+                // 2. This code runs exactly when the case is tiny/gone
+
+                // Spawn the puff effect
+                GameObject puff = Instantiate(puffEffect, currentCase.transform.position + new Vector3(0f, 0.25f, 0f), Quaternion.identity);
+
+                // Destroy the old case so it's gone from the hierarchy
+                Destroy(currentCase.gameObject);
+
+                // 3. Start the timer for the next one
+                StartCoroutine(SpawnNewCase(5f));
+            });
+        }
+    }
+
+    private IEnumerator SpawnNewCase(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SpawnSuitCase();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && active)
@@ -104,6 +166,8 @@ public class SuitcaseMinigame : MonoBehaviour
     {
         SuitCase spawnedCase = Instantiate(suitCase, suitCaseSpawnPos.position, Quaternion.identity);
         spawnedCase.transform.eulerAngles = new Vector3(0, -90f, 0);
+
+        currentCase = spawnedCase;
 
         spawnedCase.GetComponentInChildren<Interactable>().onInteract.AddListener(() =>
         {

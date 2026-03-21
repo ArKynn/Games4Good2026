@@ -10,17 +10,31 @@ public class SuitCase : MonoBehaviour
 
     [SerializeField] private SuitcaseObject[] possibleItems;
     private List<SuitcaseObject> spawnedItems = new List<SuitcaseObject>();
-    private int numberOfBadItems = 0;
+    public int numberOfBadItems = 0;
 
-    public void CheckCase()
+    public bool CheckCase()
     {
+
+        for (int i = spawnedItems.Count - 1; i >= 0; i--)
+        {
+            SuitcaseObject item = spawnedItems[i];
+            if (item != null)
+            {
+                Destroy(item.gameObject);
+            }
+        }
+
+        spawnedItems.Clear();
+
         if (numberOfBadItems > 0)
         {
             Debug.Log("Case failed! Bad items found.");
+            return false;
         }
         else
         {
             Debug.Log("Case passed! No bad items found.");
+            return true;
         }
     }
 
