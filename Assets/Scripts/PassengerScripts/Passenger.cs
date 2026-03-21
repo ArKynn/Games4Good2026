@@ -44,8 +44,7 @@ public class Passenger : MonoBehaviour
         _patience -= Time.deltaTime;
         if (_patience <= 0f)
         {
-            _agentController.GoToDespawn();
-            // Notify game strike manager with +1 strike
+            _agentController.LostPatience();
             ToggleLosingPatience();
         }
     }

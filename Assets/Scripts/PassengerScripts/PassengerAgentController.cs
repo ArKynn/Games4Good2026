@@ -37,4 +37,10 @@ public class PassengerAgentController : MonoBehaviour
     {
         if(_agentController == null) _agentController = agentController;
     }
+
+    public void LostPatience()
+    {
+        GoToDespawn();
+        _agentController.LostPatience();
+    }
 }
