@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 33aca5d08dd4bcf4ab221bdc4499a2fe
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 11066
+  packageName: UCLA Mesh Creator
+  packageVersion: .8
+  assetPath: Assets/UCLAGameLab/Materials/baseTransparentMaterial.mat
+  uploadId: 160031

@@ -14,23 +14,28 @@ public class SuitcaseMinigame : MonoBehaviour
     [SerializeField] private LayerMask draggableLayer;
     [SerializeField] private float dragSpeed = 12f;
 
+    [Header("Scroll & Rotate Settings")]
+    [SerializeField] private float scrollSpeed = 2f;
+    [SerializeField] private float minScrollDistance = 0.5f;
+    [SerializeField] private float maxScrollDistance = 5f;
+    [SerializeField] private float rotationSpeed = 5f;
+
     private Rigidbody _grabbedRb;
     private float _dragDepth;
     private Vector3 _grabOffset;
+    private bool _isCaseLead;
+    private bool _isRotating; // Track if RMB is held
 
     public void ActivateGame(bool toggle)
     {
         active = toggle;
-
         if (toggle)
         {
-            // Prepare for transition
             FirstPersonViewport.Instance.minigameActive = true;
             FirstPersonViewport.Instance.SetMovementActive(false);
             originalCameraPosition = Camera.main.transform.position;
             originalCameraRotation = Camera.main.transform.rotation;
 
-            // Move Camera to Minigame Position
             Camera.main.transform.DOMove(cameraPosition.position, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
             {
                 if (instructionsUI != null)
@@ -44,11 +49,8 @@ public class SuitcaseMinigame : MonoBehaviour
         }
         else
         {
-            FirstPersonViewport.Instance.minigameActive = true;
-            // Release any grabbed object
+            FirstPersonViewport.Instance.minigameActive = false;
             Release();
-
-            // Hide UI
             if (instructionsUI != null)
             {
                 instructionsUI.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
@@ -56,8 +58,6 @@ public class SuitcaseMinigame : MonoBehaviour
                     instructionsUI.SetActive(false);
                 });
             }
-
-            // Return Camera to Player
             Camera.main.transform.DOMove(originalCameraPosition, 0.5f).SetEase(Ease.InBack);
             Camera.main.transform.DORotate(originalCameraRotation.eulerAngles, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
             {
@@ -68,7 +68,6 @@ public class SuitcaseMinigame : MonoBehaviour
 
     void Update()
     {
-        // Exit minigame with Escape
         if (Input.GetKeyDown(KeyCode.Escape) && active)
         {
             ActivateGame(false);
@@ -76,15 +75,21 @@ public class SuitcaseMinigame : MonoBehaviour
 
         if (!active) return;
 
-        // Handle Dragging Input
-        if (Input.GetMouseButtonDown(0))
-        {
-            TryGrab();
-        }
+        if (Input.GetMouseButtonDown(0)) TryGrab();
+        if (Input.GetMouseButtonUp(0)) Release();
 
-        if (Input.GetMouseButtonUp(0))
+        if (_grabbedRb != null && !_isCaseLead)
         {
-            Release();
+            // --- SCROLL LOGIC ---
+            float scroll = Input.GetAxis("Mouse ScrollWheel");
+            if (Mathf.Abs(scroll) > 0.01f)
+            {
+                _dragDepth = Mathf.Clamp(_dragDepth + (scroll * scrollSpeed), minScrollDistance, maxScrollDistance);
+            }
+
+            // --- ROTATION TOGGLE ---
+            // Only allow rotation if it's not the Case Lead
+            _isRotating = Input.GetMouseButton(1);
         }
     }
 
@@ -92,58 +97,67 @@ public class SuitcaseMinigame : MonoBehaviour
     {
         if (active && _grabbedRb != null)
         {
-            HandlePhysicsDrag();
+            if (_isRotating)
+            {
+                HandleRotation();
+            }
+            else
+            {
+                HandlePhysicsDrag();
+            }
         }
     }
 
     [Header("Physics Tuning")]
-    [SerializeField] private float dragForce = 20f;      // How "strong" the stickiness is
-    [SerializeField] private float maxVelocity = 10f;    // The speed limit (prevents flying away)
-    [SerializeField] private float damping = 5f;        // How fast it stops wobbling
+    [SerializeField] private float dragForce = 20f;
+    [SerializeField] private float maxVelocity = 10f;
+    [SerializeField] private float damping = 5f;
 
     private void TryGrab()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f, draggableLayer))
         {
-            if (hit.collider.TryGetComponent(out TAG_CaseLead lead))
+            _grabbedRb = hit.collider.GetComponent<Rigidbody>();
+            if (_grabbedRb != null)
             {
-                _grabbedRb = hit.collider.GetComponent<Rigidbody>();
-                if (_grabbedRb != null)
-                {
-                    _dragDepth = Vector3.Distance(Camera.main.transform.position, hit.point);
-                    _grabOffset = _grabbedRb.transform.position - hit.point;
+                _isCaseLead = _grabbedRb.GetComponent<TAG_CaseLead>() != null;
+                _dragDepth = Vector3.Distance(Camera.main.transform.position, hit.point);
+                _grabOffset = _grabbedRb.transform.position - hit.point;
 
-                    _grabbedRb.useGravity = false;
-
-                    // IMPORTANT: High damping makes it feel "heavy" and prevents sliding
-                    _grabbedRb.linearDamping = damping;
-                    _grabbedRb.angularDamping = damping;
-                }
+                _grabbedRb.useGravity = false;
+                _grabbedRb.linearDamping = damping;
+                _grabbedRb.angularDamping = damping;
             }
         }
     }
 
     private void HandlePhysicsDrag()
     {
-        // 1. Calculate Target Position
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = _dragDepth;
         Vector3 targetWorldPos = Camera.main.ScreenToWorldPoint(mousePos) + _grabOffset;
 
-        // 2. Calculate the "Spring" Force
-        // Instead of setting velocity, we add to it based on distance
         Vector3 diff = targetWorldPos - _grabbedRb.transform.position;
-
-        // Apply the force
         _grabbedRb.linearVelocity = diff * dragForce;
 
-        // 3. The "Speed Limit" (The Fix for flying away)
-        // If the velocity exceeds our max, we trim it down
         if (_grabbedRb.linearVelocity.magnitude > maxVelocity)
         {
             _grabbedRb.linearVelocity = _grabbedRb.linearVelocity.normalized * maxVelocity;
         }
+    }
+
+    private void HandleRotation()
+    {
+        // Stop movement while rotating so it doesn't drift away
+        _grabbedRb.linearVelocity = Vector3.zero;
+
+        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
+        float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed;
+
+        // Rotate relative to the Camera's up and right axes for intuitive feel
+        _grabbedRb.AddTorque(Camera.main.transform.up * -mouseX, ForceMode.VelocityChange);
+        _grabbedRb.AddTorque(Camera.main.transform.right * mouseY, ForceMode.VelocityChange);
     }
 
     private void Release()
@@ -152,16 +166,18 @@ public class SuitcaseMinigame : MonoBehaviour
         {
             _grabbedRb.useGravity = true;
             _grabbedRb.linearDamping = 0.05f;
+            _grabbedRb.angularDamping = 0.05f;
 
-            // Force the physics engine to stop moving it if it's slow
-            if (_grabbedRb.linearVelocity.magnitude < 0.5f)
+            if (_grabbedRb.linearVelocity.magnitude < 0.5f && _isCaseLead)
             {
                 _grabbedRb.linearVelocity = Vector3.zero;
                 _grabbedRb.angularVelocity = Vector3.zero;
-                _grabbedRb.Sleep();
+
             }
 
             _grabbedRb = null;
+            _isCaseLead = false;
+            _isRotating = false;
         }
     }
 }

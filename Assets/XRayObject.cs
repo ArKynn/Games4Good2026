@@ -10,7 +10,7 @@ public class XRayObject : MonoBehaviour
     {
         if (wrong)
         {
-            spriteRenderer.color = Color.red;
+            spriteRenderer.color = new Color(1f, 0.75f, 0.75f); // Light Red for wrong objects
         }
 
     }

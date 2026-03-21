@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d3cb9a0658343f843ba8c2cbea2148f4
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 11066
+  packageName: UCLA Mesh Creator
+  packageVersion: .8
+  assetPath: Assets/UCLAGameLab/Editor/Triangulator.cs
+  uploadId: 160031

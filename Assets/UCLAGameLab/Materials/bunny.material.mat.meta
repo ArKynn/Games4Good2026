@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 2efc1638de8e1934c9fcfabe8be2f33f
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 11066
+  packageName: UCLA Mesh Creator
+  packageVersion: .8
+  assetPath: Assets/UCLAGameLab/Materials/bunny.material.mat
+  uploadId: 160031

@@ -82,6 +82,9 @@ public class XRayGame : MonoBehaviour
     private bool isWrong = false;
     [SerializeField] private SpriteRenderer background;
 
+    [SerializeField] private SpriteRenderer caseForeground;
+    [SerializeField] private Sprite[] caseForegrounds;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -125,14 +128,28 @@ public class XRayGame : MonoBehaviour
 
     public void CheckCase()
     {
+        background.enabled = true;
         if (isWrong)
         {
-            background.DOColor(Color.yellow, 0.3f).SetLoops(10, LoopType.Yoyo);
+            caseParent.DOKill(); // Stop any ongoing tweens on the case parent to prevent conflicts
+            background.DOColor(Color.yellow, 0.3f).SetLoops(10, LoopType.Yoyo).onComplete += () =>
+            {
+                background.enabled = false;
+                // If wrong the case goes up by 5 units using dotween, then it starts a new case
+                
+                caseParent.DOMoveY(caseParent.position.y + 15f, 7).SetEase(Ease.Linear).OnComplete(() =>
+                {
+                    StartMovingCase();
+                });
+            };
             // Handle failure (e.g., show feedback, reset game, etc.)
         }
         else
         {
-            background.DOColor(Color.red, 0.3f).SetLoops(10, LoopType.Yoyo);
+            background.DOColor(Color.red, 0.3f).SetLoops(10, LoopType.Yoyo).onComplete += () =>
+            {
+                background.enabled = false;
+            };
             // Handle success (e.g., show feedback, increase score, etc.)
         }
         
@@ -144,6 +161,8 @@ public class XRayGame : MonoBehaviour
         bool wrongCase = Random.value < wrongCaseChance;
 
         isWrong = wrongCase;
+
+        caseForeground.sprite = caseForegrounds[Random.Range(0, caseForegrounds.Length)];
 
         if (currentCaseObjects != null)
             foreach (XRayObject xRayObject in currentCaseObjects)

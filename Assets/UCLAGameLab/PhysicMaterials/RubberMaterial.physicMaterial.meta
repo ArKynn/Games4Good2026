@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: f0c20d3503f6a3148a86c5b914666d9c
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 11066
+  packageName: UCLA Mesh Creator
+  packageVersion: .8
+  assetPath: Assets/UCLAGameLab/PhysicMaterials/RubberMaterial.physicMaterial
+  uploadId: 160031

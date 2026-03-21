@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 40412b8488563fb4b896b3b5647ee7ae
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 11066
+  packageName: UCLA Mesh Creator
+  packageVersion: .8
+  assetPath: Assets/UCLAGameLab/Editor/MeshCreatorInspector.cs
+  uploadId: 160031
