@@ -8,7 +8,8 @@ public class XRayGame : MonoBehaviour
     public bool active;
     [SerializeField] private GameObject instructionsUI;
     private StrikeManager _strikeManager;
-    
+
+    private bool buttonClicked = false;
     public void ActivateGame(bool toggle)
     {
         active = toggle;
@@ -131,6 +132,9 @@ public class XRayGame : MonoBehaviour
 
     public void CheckCase()
     {
+        if (buttonClicked)return;
+
+        buttonClicked = true;
         background.enabled = true;
         if (isWrong)
         {
@@ -162,6 +166,7 @@ public class XRayGame : MonoBehaviour
 
     public void StartMovingCase()
     {
+        buttonClicked = false;
         bool wrongCase = Random.value < wrongCaseChance;
 
         isWrong = wrongCase;
