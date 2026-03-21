@@ -1014,6 +1014,9 @@ MonoBehaviour:
   - {fileID: 3947237177488730724, guid: 1aac21b6b7ff6014fad7e5c7dcc7aaa1, type: 3}
   - {fileID: 3947237177488730724, guid: 462812d8ad6a0d14995d9de92ae9c047, type: 3}
   - {fileID: 3947237177488730724, guid: c1cc1427301ea5040b3fd16d60bbf022, type: 3}
+  - {fileID: 3947237177488730724, guid: f470c2d860a4c0d41b9d31eab715f10c, type: 3}
+  - {fileID: 3947237177488730724, guid: f9ab860f31c3f014086b9ea8c58ac454, type: 3}
+  - {fileID: 3947237177488730724, guid: ad0f464b2a2db8f499653adcccc675a9, type: 3}
   wrongObjects:
   - {fileID: 198090359366740994, guid: 120dc71b927a73a4b95427047e7dd621, type: 3}
   - {fileID: 198090359366740994, guid: ae9763ba3daa84e4cac01d55bb035bad, type: 3}
