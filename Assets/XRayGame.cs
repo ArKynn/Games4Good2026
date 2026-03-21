@@ -10,8 +10,7 @@ public class XRayGame : MonoBehaviour
     public void ActivateGame(bool toggle)
     {
         active = toggle;
-        if(instructionsUI != null)
-            instructionsUI.SetActive(toggle);
+        
 
         if(!toggle)
         {
@@ -21,17 +20,40 @@ public class XRayGame : MonoBehaviour
         // Make the vision cone increase from 0 to the original size if its to activate the game, and vice versa
         if (toggle)
         {
+            
+
             FirstPersonViewport.Instance.minigameActive = true;
             originalCameraPosition  = Camera.main.transform.position;
-            Camera.main.transform.DOMove(cameraPosition.position, 0.5f).SetEase(Ease.OutBack);
+            Camera.main.transform.DOMove(cameraPosition.position, 0.5f).SetEase(Ease.OutBack).onComplete += () =>
+            {
+                if (instructionsUI != null)
+                {
+                    instructionsUI.SetActive(true);
+                    instructionsUI.transform.localScale = Vector3.zero;
+                    instructionsUI.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
+                }
+            };
             Camera.main.transform.DORotate(cameraPosition.eulerAngles, 0.5f).SetEase(Ease.OutBack);
             visionCone.localScale = Vector3.zero;
             visionCone.DOScale(originalVisionConeScale, 0.5f).SetEase(Ease.OutBack);
         }
         else
         {
-            FirstPersonViewport.Instance.minigameActive = false;
-            Camera.main.transform.DOMove(originalCameraPosition, 0.5f).SetEase(Ease.InBack);
+
+            if(instructionsUI != null)
+            {
+                instructionsUI.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
+                {
+                    instructionsUI.SetActive(false);
+                });
+            }
+
+            
+            Camera.main.transform.DOMove(originalCameraPosition, 0.5f).SetEase(Ease.InBack).onComplete += () =>
+            {
+                FirstPersonViewport.Instance.minigameActive = false;
+            };
+
             visionCone.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack);
         }
 
