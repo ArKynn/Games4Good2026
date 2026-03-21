@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8125100985890406612}
   - component: {fileID: 5927358954164068249}
   - component: {fileID: 1643771499486499157}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Light Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4916,7 +4916,7 @@ GameObject:
   - component: {fileID: 1978689737715041618}
   - component: {fileID: 1978689737715041619}
   - component: {fileID: 1978689737715041616}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFXR4 Firework HDR Shoot Single (Random Color)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9641,7 +9641,7 @@ GameObject:
   - component: {fileID: 1358281123558238475}
   - component: {fileID: 4303868112905912029}
   - component: {fileID: 5224137781039121831}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9760,6 +9760,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1978689737715041621}
     m_Modifications:
     - target: {fileID: 1791995480500357508, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791995480500357508, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -9842,6 +9846,10 @@ PrefabInstance:
     - target: {fileID: 8791802859087666345, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
       propertyPath: m_Name
       value: CFXR4 Firework HDR (Big)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791802859087666345, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8989881128925888840, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
       propertyPath: m_Color.b
