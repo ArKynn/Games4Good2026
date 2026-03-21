@@ -603,6 +603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199693b89f0142a987b95fa1e9731e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _luggagePrefab: {fileID: 0}
+  giveLuggages: 0
   _passengerPrefab: {fileID: 4371018076328683132, guid: d1667f3f6e143f44ba1b0c52d9b892b7, type: 3}
   _spawnWaypoint: {fileID: 1931052831}
   _lineWaypoints:
@@ -2448,6 +2450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199693b89f0142a987b95fa1e9731e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _luggagePrefab: {fileID: 7047435167201822023, guid: 6023550eacd5dbd40b3424811f79db6c, type: 3}
+  giveLuggages: 1
   _passengerPrefab: {fileID: 4371018076328683132, guid: d1667f3f6e143f44ba1b0c52d9b892b7, type: 3}
   _spawnWaypoint: {fileID: 154564017}
   _lineWaypoints:

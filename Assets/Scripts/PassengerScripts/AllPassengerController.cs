@@ -7,6 +7,8 @@ namespace PassengerScripts
 {
     public class AllPassengerController : MonoBehaviour
     {
+        [SerializeField] private GameObject _luggagePrefab;
+        [SerializeField] private bool giveLuggages;
         [SerializeField] private GameObject _passengerPrefab;
         [SerializeField] private Waypoint _spawnWaypoint;
         [SerializeField] private List<Waypoint> _lineWaypoints;
@@ -92,6 +94,7 @@ namespace PassengerScripts
             var temp = Instantiate(_passengerPrefab, _spawnWaypoint.transform.position, Quaternion.identity)
                 .GetComponent<PassengerAgentController>();
             temp.SetAllPassengerController(this);
+            if(giveLuggages) temp.GetComponent<Passenger>().AddLuggage(_luggagePrefab);
             _lineAgents.Enqueue(temp);
             UpdateLine(this, EventArgs.Empty);
         }
