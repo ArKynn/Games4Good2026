@@ -21,7 +21,7 @@ public class SuitcaseMinigame : MonoBehaviour
     [SerializeField] private float minScrollDistance = 0.5f;
     [SerializeField] private float maxScrollDistance = 5f;
     [SerializeField] private float rotationSpeed = 5f;
-
+    
     private Rigidbody _grabbedRb;
     private float _dragDepth;
     private Vector3 _grabOffset;
@@ -31,9 +31,17 @@ public class SuitcaseMinigame : MonoBehaviour
 
     [SerializeField] private SuitCase suitCase;
     private SuitCase currentCase;
+    public SuitCase CurrentCase => currentCase;
     [SerializeField] private Transform suitCaseSpawnPos;
 
     [SerializeField] private GameObject puffEffect;
+
+    private SuitcaseController _suitcaseController;
+
+    void Start()
+    {
+        _suitcaseController = FindFirstObjectByType<SuitcaseController>();
+    }
 
     public void ActivateGame(bool toggle)
     {
@@ -75,11 +83,6 @@ public class SuitcaseMinigame : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        SpawnSuitCase();
-    }
-
 
     public void DecreaseBadItem()
     {
@@ -109,10 +112,15 @@ public class SuitcaseMinigame : MonoBehaviour
             {
                 Debug.Log("Case failed! Try again.");
 
-                // You can add logic here to reset the current case or give feedback to the player
+                _suitcaseController.ErrorHandlingCase();
             }
+            _suitcaseController.DoneInspectingCase();
+            StartDespawnCase();
         }
+    }
 
+    public void StartDespawnCase()
+    {
         if (puffEffect)
         {
             // 1. Scale the current case to zero
@@ -125,17 +133,8 @@ public class SuitcaseMinigame : MonoBehaviour
 
                 // Destroy the old case so it's gone from the hierarchy
                 Destroy(currentCase.gameObject);
-
-                // 3. Start the timer for the next one
-                StartCoroutine(SpawnNewCase(5f));
             });
         }
-    }
-
-    private IEnumerator SpawnNewCase(float time)
-    {
-        yield return new WaitForSeconds(time);
-        SpawnSuitCase();
     }
 
     void Update()
@@ -164,6 +163,7 @@ public class SuitcaseMinigame : MonoBehaviour
 
     public void SpawnSuitCase()
     {
+        print("suit spawn");
         SuitCase spawnedCase = Instantiate(suitCase, suitCaseSpawnPos.position, Quaternion.identity);
         spawnedCase.transform.eulerAngles = new Vector3(0, 90f, 0);
 

@@ -7,6 +7,8 @@ public class XRayGame : MonoBehaviour
     private Vector3 originalCameraPosition;
     public bool active;
     [SerializeField] private GameObject instructionsUI;
+    private StrikeManager _strikeManager;
+    
     public void ActivateGame(bool toggle)
     {
         active = toggle;
@@ -88,6 +90,7 @@ public class XRayGame : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _strikeManager = FindFirstObjectByType<StrikeManager>();
         originalVisionConeScale = visionCone.localScale;
         visionCone.localScale = Vector3.zero; // Start with the vision cone hidden
         StartMovingCase();
@@ -150,6 +153,7 @@ public class XRayGame : MonoBehaviour
             {
                 background.enabled = false;
             };
+            _strikeManager.AddStrike();
             // Handle success (e.g., show feedback, increase score, etc.)
         }
         
@@ -210,7 +214,7 @@ public class XRayGame : MonoBehaviour
         {
             // Handle case reaching the end position (e.g., check for player input, reset case, etc.)
             Debug.Log("Case reached the end position!");
-
+            if(isWrong) _strikeManager.AddStrike();
             StartMovingCase(); // Start the next case immediately after one finishes
         });
 
