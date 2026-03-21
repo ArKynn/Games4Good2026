@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Passenger : MonoBehaviour
 {
+    [SerializeField] private GameObject _passportHolder;
     private PassengerAgentController _agentController;
     private float _patience = 0;
     public float Patience => _patience;
@@ -10,6 +11,9 @@ public class Passenger : MonoBehaviour
     [SerializeField] private float _minPatience = 5f;
     
     private bool isLosingPatience = false;
+    
+    public GameObject Passport { get; private set; }
+    public bool IsPassportCorrect {get; private set;}
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,7 +34,7 @@ public class Passenger : MonoBehaviour
         _patience = Random.Range(_minPatience, _maxPatience);
     }
     
-    private void ToggleLosingPatience()
+    public void ToggleLosingPatience()
     {
         isLosingPatience = !isLosingPatience;
     }
@@ -49,5 +53,15 @@ public class Passenger : MonoBehaviour
     public void StartLosingPatience()
     {
         ToggleLosingPatience();
+    }
+
+    public void SetPassport(GameObject passport, bool isCorrect)
+    {
+        if(Passport != null) return;
+        Passport = passport;
+        Passport.transform.SetParent(_passportHolder.transform);
+        Passport.transform.localPosition = Vector3.zero;
+        Passport.transform.localRotation = Quaternion.identity;
+        IsPassportCorrect = isCorrect;
     }
 }

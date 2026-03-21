@@ -23,8 +23,13 @@ public class PassengerAgentController : MonoBehaviour
         _agent.SetDestination(destination.Position);
     }
 
-    public void GoToDespawn()
+    public void GoToDespawn(bool wasRejected = false)
     {
+        if (wasRejected)
+        {
+            MoveToWaypoint(_agentController.RejectedNPCEndWaypoint);
+            return;
+        }
         MoveToWaypoint(_agentController.NPCEndWaypoint);
     }
 
