@@ -1,0 +1,45 @@
+using UnityEngine;
+
+public class Passenger : MonoBehaviour
+{
+    private float _patience = 0;
+    public float Patience => _patience;
+    
+    [SerializeField] private float _maxPatience = 60f;
+    [SerializeField] private float _minPatience = 10f;
+    
+    private bool isLosingPatience = false;
+    
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        RandomizePatience();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(isLosingPatience) UpdatePatience();
+    }
+
+    private void RandomizePatience()
+    {
+        _patience = Random.Range(_minPatience, _maxPatience);
+    }
+    
+    private void ToggleLosingPatience()
+    {
+        isLosingPatience = !isLosingPatience;
+    }
+
+    private void UpdatePatience()
+    {
+        _patience -= Time.deltaTime;
+        if (_patience <= 0f)
+        {
+            // Skip line and go away
+            // Notify game strike manager with +1 strike
+        }
+    }
+}
