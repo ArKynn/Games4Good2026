@@ -11,7 +11,7 @@ public class XRayGame : MonoBehaviour
     private Vector3 instructionsOriginalScale;
     private StrikeManager _strikeManager;
 
-    private bool buttonClicked = false;
+    private bool buttonClicked = true;
 
    
        
@@ -19,9 +19,6 @@ public class XRayGame : MonoBehaviour
 
     public void ActivateGame(bool toggle)
     {
-        
-        
-
         if(!toggle)
         {
             FirstPersonViewport.Instance.SetMovementActive(true);
@@ -103,8 +100,6 @@ public class XRayGame : MonoBehaviour
         originalVisionConeScale = visionCone.localScale;
         instructionsOriginalScale = instructionsUI.transform.localScale;
         visionCone.localScale = Vector3.zero; // Start with the vision cone hidden
-        StartMovingCase();
-
     }
 
     [SerializeField] private float movementSpeed = 5f;

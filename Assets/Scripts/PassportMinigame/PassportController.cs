@@ -1,6 +1,7 @@
 using System;
 using PassengerScripts;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class PassportController : MonoBehaviour
@@ -12,6 +13,8 @@ public class PassportController : MonoBehaviour
     private Passenger _waitingPassenger;
     private PassengerAgentController _waitingPassengerController;
     private StrikeManager _strikeManager;
+    
+    public UnityEvent onNewPassport;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -81,7 +84,7 @@ public class PassportController : MonoBehaviour
 
     private void ShowPassport()
     {
-        
+        onNewPassport?.Invoke();
     }
     
     private void HidePassport()

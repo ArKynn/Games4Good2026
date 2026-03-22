@@ -40,6 +40,7 @@ public class ComputerNotifications : MonoBehaviour
     [Header("Events")]
     public UnityEvent onCorrect;
     public UnityEvent onWrong;
+    public UnityEvent onNewNotification;
 
     private Vector3 _panelInitialScale;
     private Vector3 _buttonAInitialScale;
@@ -78,11 +79,6 @@ public class ComputerNotifications : MonoBehaviour
         wrongFeedbackObj.SetActive(false);
     }
 
-    void Start()
-    {
-        
-    }
-
     public void StartNotifications()
     {
         StartCoroutine(SpawnRoutine());
@@ -102,6 +98,7 @@ public class ComputerNotifications : MonoBehaviour
 
     IEnumerator ShowNotificationAndWait()
     {
+        onNewNotification?.Invoke();
         _isActive = true;
         _isProcessingFeedback = false;
         _timer = duration;

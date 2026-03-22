@@ -7,6 +7,7 @@ public class GameStart : MonoBehaviour
     [SerializeField] private AllPassengerController _suitcasePassengerController;
     [SerializeField] private AllPassengerController _passportPassengerController;
     [SerializeField] private XRayGame _xRayGame;
+    [SerializeField] private ComputerNotifications _computerNotifications;
     private bool gameStarted = false;
 
 
@@ -17,6 +18,7 @@ public class GameStart : MonoBehaviour
             _xRayGame.StartMovingCase();
             _suitcasePassengerController.StartGame();
             _passportPassengerController.StartGame();
+            _computerNotifications.StartNotifications();
             gameStarted = true; 
         }
     }
