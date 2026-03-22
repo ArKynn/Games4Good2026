@@ -1,15 +1,19 @@
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Passenger : MonoBehaviour
 {
     [SerializeField] private GameObject _passportHolder;
     [SerializeField] private GameObject _luggageHolder;
+    [SerializeField] private Image _patienceImage; 
+    [SerializeField] private GameObject _patienceBar;
     public GameObject PassportHolder => _passportHolder;
     public GameObject LuggageHolder => _luggageHolder;
     public GameObject modelPrefab;
     private PassengerAgentController _agentController;
     private float _patience = 0;
+    private float _calculatedMaxPatience = 0;
     public float Patience => _patience;
     
     [SerializeField] private float _maxPatience = 10f;
@@ -37,16 +41,19 @@ public class Passenger : MonoBehaviour
     private void RandomizePatience()
     {
         _patience = Random.Range(_minPatience, _maxPatience);
+        _calculatedMaxPatience = _patience;
     }
     
     public void ToggleLosingPatience()
     {
         isLosingPatience = !isLosingPatience;
+        _patienceBar.SetActive(isLosingPatience);
     }
 
     private void UpdatePatience()
     {
         _patience -= Time.deltaTime;
+        _patienceImage.fillAmount = _patience / _calculatedMaxPatience;
         if (_patience <= 0f)
         {
             _agentController.LostPatience();
