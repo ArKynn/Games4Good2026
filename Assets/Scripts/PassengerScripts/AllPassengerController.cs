@@ -24,6 +24,7 @@ namespace PassengerScripts
         [SerializeField] private float _spawnFrequency;
         private float _spawnTimer = 0;
         private int _checkpointTimerChecks = 0;
+        private bool _started = false;
         
         private bool _checkpointOccupied = false;
 
@@ -46,6 +47,7 @@ namespace PassengerScripts
 
         void Update()
         {
+            if(!_started) return;
             _spawnTimer += Time.deltaTime;
             if (_spawnTimer >= _spawnFrequency)
             {
@@ -128,6 +130,11 @@ namespace PassengerScripts
         public void LostPatience()
         {
             _strikeManager.AddStrike();
+        }
+
+        public void StartGame()
+        {
+            _started = true;
         }
     }
 }
