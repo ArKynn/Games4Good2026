@@ -12,7 +12,7 @@ public class LossSequenceController : MonoBehaviour
     [SerializeField] private Transform resetPosition;
 
     [Header("Shader Mask Settings")]
-    [SerializeField] private Material irisMaterial; // The material with MaskScale
+    [SerializeField] private Material irisMaterial;
     [SerializeField] private float irisDuration = 0.6f;
     [SerializeField] private Ease irisEase = Ease.InOutQuart;
 
@@ -20,32 +20,36 @@ public class LossSequenceController : MonoBehaviour
     [SerializeField] private MeshRenderer screenRenderer;
     [SerializeField] private Material lossMaterial;
 
+    [Header("Objects To Activate")]
+    [SerializeField] private GameObject objectToActivate;
+
     [Header("Timing")]
     [SerializeField] private float waitAtLossPos = 2.0f;
     [SerializeField] private float waitAtScreenPos = 3.0f;
+    [SerializeField] private float activationDelay = 0.4f; // 🔥 NEW
 
     [Header("Events")]
     public UnityEvent onSequenceComplete;
 
-    // Shader property ID for performance
     private static readonly int MaskScaleID = Shader.PropertyToID("_MaskScale");
 
     [SerializeField] private FirstPersonViewport fpController;
 
-
     private void Start()
     {
-        // Ensure the iris material starts with the hole open
         if (irisMaterial != null)
         {
             irisMaterial.SetFloat(MaskScaleID, 1f);
         }
-    }
 
+        if (objectToActivate != null)
+        {
+            objectToActivate.SetActive(false);
+        }
+    }
 
     private void Update()
     {
-        // For testing: Press L to start the loss sequence
         if (Input.GetKeyDown(KeyCode.L))
         {
             StartLossSequence();
@@ -55,25 +59,27 @@ public class LossSequenceController : MonoBehaviour
     public void StartLossSequence()
     {
         fpController.enabled = false;
-        // Safety: Kill existing tweens
+
         mainCamera.DOKill();
 
-        // Ensure material starts at 1 (Open)
         irisMaterial.SetFloat(MaskScaleID, 1f);
 
         Sequence lossSeq = DOTween.Sequence();
 
-        // 1. Move to Loss Position & Wait
+        // 1. Move to Loss Position
         lossSeq.Append(mainCamera.DOMove(lossPosition.position, 1f).SetEase(Ease.OutSine));
         lossSeq.Join(mainCamera.DORotateQuaternion(lossPosition.rotation, 1f).SetEase(Ease.OutSine));
         lossSeq.AppendInterval(waitAtLossPos);
 
-        // 2. Iris Out (Close Hole: 1 -> 50)
-        // Using DOTween.To to target the shader float
-        lossSeq.Append(DOTween.To(() => irisMaterial.GetFloat(MaskScaleID),
-            x => irisMaterial.SetFloat(MaskScaleID, x), 300f, irisDuration).SetEase(irisEase));
+        // 2. Iris Out (Close)
+        lossSeq.Append(DOTween.To(
+            () => irisMaterial.GetFloat(MaskScaleID),
+            x => irisMaterial.SetFloat(MaskScaleID, x),
+            300f,
+            irisDuration
+        ).SetEase(irisEase));
 
-        // 3. Instant Teleport to Screen & Change Material (Hidden)
+        // 3. Teleport + change screen
         lossSeq.AppendCallback(() =>
         {
             mainCamera.position = screenPosition.position;
@@ -85,17 +91,33 @@ public class LossSequenceController : MonoBehaviour
             }
         });
 
-        // 4. Iris In (Open Hole: 50 -> 1) & Wait to see the screen
-        lossSeq.Append(DOTween.To(() => irisMaterial.GetFloat(MaskScaleID),
-            x => irisMaterial.SetFloat(MaskScaleID, x), 2f, irisDuration).SetEase(irisEase));
+        // 🎭 Dramatic delay
+        lossSeq.AppendInterval(activationDelay);
+
+        // 4. Activate object AFTER delay
+        lossSeq.AppendCallback(() =>
+        {
+            if (objectToActivate != null)
+            {
+                objectToActivate.SetActive(true);
+            }
+        });
+
+        // 5. Iris In (Open)
+        lossSeq.Append(DOTween.To(
+            () => irisMaterial.GetFloat(MaskScaleID),
+            x => irisMaterial.SetFloat(MaskScaleID, x),
+            2f,
+            irisDuration
+        ).SetEase(irisEase));
 
         lossSeq.AppendInterval(waitAtScreenPos);
 
-        // 5. Final Move to Reset Position
+        // 6. Move to Reset Position
         lossSeq.Append(mainCamera.DOMove(resetPosition.position, 6f).SetEase(Ease.InOutExpo));
         lossSeq.Join(mainCamera.DORotateQuaternion(resetPosition.rotation, 6f).SetEase(Ease.InOutExpo));
 
-        // 6. Trigger the Final Event
+        // 7. Final Event
         lossSeq.OnComplete(() => onSequenceComplete?.Invoke());
     }
 }
