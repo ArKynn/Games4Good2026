@@ -3,6 +3,7 @@ using PassengerScripts;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = System.Random;
+using DG.Tweening;
 
 public class SuitcaseController : MonoBehaviour
 {
@@ -16,14 +17,23 @@ public class SuitcaseController : MonoBehaviour
     private SuitcaseMinigame _suitcaseMinigame;
     
     public UnityEvent onNewCase;
-    
+
+    [SerializeField] private float distanceToFly = 20f;
+
     void Start()
     {
         _strikeManager = FindFirstObjectByType<StrikeManager>();
         _suitcaseMinigame = FindFirstObjectByType<SuitcaseMinigame>();
         _passengerController.SpawnWaypoint.OnWaypointEnter += OnNewPassenger;
         _passengerController.CheckpointWaypoint.OnWaypointEnter += OnPassengerWaiting;
+        _passengerController.CheckpointWaypoint.OnWaypointEnter += PassengerLookAtPlayer;
         _passengerController.CheckpointWaypoint.OnWaypointExit += OnPassengerExit;
+    }
+
+    private void PassengerLookAtPlayer(object sender, EventArgs e)
+    {
+        //passenger looks towards the camera on the Y axis
+        _waitingPassenger.transform.DOLookAt(new Vector3(Camera.main.transform.position.x, _waitingPassenger.transform.position.y, Camera.main.transform.position.z), 0.5f).SetEase(Ease.InOutSine);
     }
 
     private void OnNewPassenger(object sender, EventArgs e)
@@ -40,7 +50,12 @@ public class SuitcaseController : MonoBehaviour
         _waitingPassenger = _waitingPassengerController.GetComponent<Passenger>();
         _suitcaseMinigame.SpawnSuitCase(_waitingPassenger.LuggageHolder.GetComponentInChildren<SkinnedMeshRenderer>().material);
         onNewCase?.Invoke();
-        _waitingPassenger.LuggageHolder.SetActive(false);
+
+        _waitingPassenger.LuggageHolder.transform.DOMove(_waitingPassenger.LuggageHolder.transform.position + Vector3.up * distanceToFly, 0.5f).SetEase(Ease.InOutSine).onComplete += () =>
+        {
+
+            _waitingPassenger.LuggageHolder.gameObject.SetActive(false);
+        };
     }
 
     private void OnPassengerExit(object sender, EventArgs e)
