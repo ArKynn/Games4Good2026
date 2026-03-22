@@ -5825,9 +5825,17 @@ MonoBehaviour:
   PassengerPrefabs:
   - {fileID: 4432455212582662443, guid: 3bd61c13d6fef5d42bcd72a3a9cc34c7, type: 3}
   - {fileID: 4432455212582662443, guid: c3d9c7ffd78c74a48bab0e673de31c7b, type: 3}
+  - {fileID: 4432455212582662443, guid: 9a000508bcdb4fc4b8538ce0ed09fe6f, type: 3}
+  - {fileID: 4432455212582662443, guid: 52091a3e07fc3294082b8162f4f96038, type: 3}
+  - {fileID: 4432455212582662443, guid: f6c5f079fde8dc244bf1bb074c1aaa3b, type: 3}
+  - {fileID: 4432455212582662443, guid: 3e2a871acc898284dab874206f2e2b2b, type: 3}
   PassengerPassportPhotos:
   - {fileID: 21300000, guid: 19dd0cc96cf052e4e9624e1eeb25a924, type: 3}
   - {fileID: 21300000, guid: f0a332004c31ce54db3750884a08d243, type: 3}
+  - {fileID: 21300000, guid: 786bb408af1f9404e914527a1806c9a0, type: 3}
+  - {fileID: 21300000, guid: ac580d4cfa9409c4cb1535e365cd52dd, type: 3}
+  - {fileID: 21300000, guid: bc977162d7d611f47950e65bf3833ace, type: 3}
+  - {fileID: 21300000, guid: 7b65887f8344dfb4cb6254c8e10725c6, type: 3}
 --- !u!1 &704498353
 GameObject:
   m_ObjectHideFlags: 0
