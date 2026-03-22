@@ -5,6 +5,7 @@ using UnityEngine;
 public class SuitcaseController : MonoBehaviour
 {
     [SerializeField] private AllPassengerController _passengerController;
+    [SerializeField] private PassengerIdentities _passengerIdentities;
     private Passenger _waitingPassenger;
     private PassengerAgentController _waitingPassengerController;
     private StrikeManager _strikeManager;
@@ -14,8 +15,16 @@ public class SuitcaseController : MonoBehaviour
     {
         _strikeManager = FindFirstObjectByType<StrikeManager>();
         _suitcaseMinigame = FindFirstObjectByType<SuitcaseMinigame>();
+        _passengerController.SpawnWaypoint.OnWaypointEnter += OnNewPassenger;
         _passengerController.CheckpointWaypoint.OnWaypointEnter += OnPassengerWaiting;
         _passengerController.CheckpointWaypoint.OnWaypointExit += OnPassengerExit;
+    }
+
+    private void OnNewPassenger(object sender, EventArgs e)
+    {
+        Passenger passenger = _passengerController.SpawnWaypoint.ConnectedAgentController.Passenger;
+        passenger.modelPrefab = _passengerIdentities.GetRandomIdentity();
+        Instantiate(passenger.modelPrefab, passenger.transform);
     }
 
     private void OnPassengerWaiting(object sender, EventArgs e)
