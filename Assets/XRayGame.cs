@@ -1,6 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 
 public class XRayGame : MonoBehaviour
 {
@@ -95,6 +96,8 @@ public class XRayGame : MonoBehaviour
 
     [SerializeField] private AlarmCycle[] alarmCycle;
 
+    public UnityEvent onNewXray;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -173,6 +176,7 @@ public class XRayGame : MonoBehaviour
 
     public void StartMovingCase()
     {
+        onNewXray?.Invoke();
         buttonClicked = false;
 
         foreach (AlarmCycle alarm in alarmCycle)

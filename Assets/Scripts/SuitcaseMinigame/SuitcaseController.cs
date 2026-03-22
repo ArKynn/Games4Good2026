@@ -1,6 +1,7 @@
 using System;
 using PassengerScripts;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = System.Random;
 
 public class SuitcaseController : MonoBehaviour
@@ -13,6 +14,8 @@ public class SuitcaseController : MonoBehaviour
     private PassengerAgentController _waitingPassengerController;
     private StrikeManager _strikeManager;
     private SuitcaseMinigame _suitcaseMinigame;
+    
+    public UnityEvent onNewCase;
     
     void Start()
     {
@@ -36,6 +39,7 @@ public class SuitcaseController : MonoBehaviour
         _waitingPassengerController = _passengerController.CheckpointWaypoint.ConnectedAgentController;
         _waitingPassenger = _waitingPassengerController.GetComponent<Passenger>();
         _suitcaseMinigame.SpawnSuitCase(_waitingPassenger.LuggageHolder.GetComponentInChildren<SkinnedMeshRenderer>().material);
+        onNewCase?.Invoke();
     }
 
     private void OnPassengerExit(object sender, EventArgs e)
