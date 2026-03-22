@@ -22,11 +22,14 @@ public class WorldToUIScreen : MonoBehaviour
 
     private Vector2 _targetPos;
 
+    private GameObject _lastHoveredObject;
+
     private void LateUpdate() // Use LateUpdate to stop "vibrating" cursor
     {
         if (!active) return;
 
         UpdateVirtualCursor();
+        HandleHoverDetection();
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -57,6 +60,55 @@ public class WorldToUIScreen : MonoBehaviour
                         virtualCursor.gameObject.SetActive(true);
                 }
             }
+        }
+    }
+
+    private void HandleHoverDetection()
+    {
+        // 1. Setup pointer data at the virtual cursor's current UI position
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+        pointerData.position = virtualCursor.anchoredPosition;
+
+        // 2. Raycast into the UI
+        var results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        GameObject currentHover = null;
+
+        // 3. Find the first object that can handle pointer events (usually a Button or Image)
+        foreach (var result in results)
+        {
+            // We look for the object or its parents (in case we hit a Text child)
+            if (result.gameObject.GetComponentInParent<EventTrigger>() != null ||
+                result.gameObject.GetComponentInParent<Selectable>() != null)
+            {
+                currentHover = result.gameObject;
+                // If we hit a child, get the parent that actually holds the logic
+                if (result.gameObject.GetComponent<EventTrigger>() == null)
+                {
+                    currentHover = result.gameObject.GetComponentInParent<EventTrigger>()?.gameObject ??
+                                   result.gameObject.GetComponentInParent<Selectable>()?.gameObject;
+                }
+                break;
+            }
+        }
+
+        // 4. Handle State Changes
+        if (currentHover != _lastHoveredObject)
+        {
+            // --- POINTER EXIT ---
+            if (_lastHoveredObject != null)
+            {
+                ExecuteEvents.Execute(_lastHoveredObject, pointerData, ExecuteEvents.pointerExitHandler);
+            }
+
+            // --- POINTER ENTER ---
+            if (currentHover != null)
+            {
+                ExecuteEvents.Execute(currentHover, pointerData, ExecuteEvents.pointerEnterHandler);
+            }
+
+            _lastHoveredObject = currentHover;
         }
     }
 
