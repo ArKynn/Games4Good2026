@@ -123,7 +123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2898732493035722227
 RectTransform:
   m_ObjectHideFlags: 0
@@ -257,6 +257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _passportHolder: {fileID: 1883590299962392289}
   _luggageHolder: {fileID: 6444824371986741800}
+  _patienceImage: {fileID: 3311415902408090453}
+  _patienceBar: {fileID: 2160410191211192602}
   modelPrefab: {fileID: 0}
   _maxPatience: 120
   _minPatience: 60
