@@ -1516,7 +1516,7 @@ MonoBehaviour:
   instructionsUI: {fileID: 1723076535}
   startPos: {fileID: 1553110691}
   endPos: {fileID: 40606274}
-  wrongCaseChance: 0.3
+  wrongCaseChance: 1
   caseParent: {fileID: 1127414989}
   objectSlots:
   - {fileID: 882061247}
