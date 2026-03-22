@@ -103,6 +103,7 @@ public class XRayGame : MonoBehaviour
         originalVisionConeScale = visionCone.localScale;
         instructionsOriginalScale = instructionsUI.transform.localScale;
         visionCone.localScale = Vector3.zero; // Start with the vision cone hidden
+        StartMovingCase();
 
     }
 
