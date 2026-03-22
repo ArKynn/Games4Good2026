@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-4563521760573403211
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: keyboard_click3_{-4563521760573403211}
+  m_AudioClip: {fileID: 8300000, guid: a09a9a9b1b39d4b4383720e0272a5806, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2524088446762838456
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: keyboard_click6_{-2524088446762838456}
+  m_AudioClip: {fileID: 8300000, guid: 8c59b0e78757bcb438d4eb34db854406, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2355516327735135001
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: keyboard_click_2_{-2355516327735135001}
+  m_AudioClip: {fileID: 8300000, guid: 3cd704bf1697f08459431043b4fc178d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-568627488757000892
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: keyboard_click_{-568627488757000892}
+  m_AudioClip: {fileID: 8300000, guid: e1c845f3913636349b1aee8955760b73, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Keyboard
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: -10, y: 0}
+  m_PitchRandomizationRange: {x: -200, y: 200}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -568627488757000892}
+  - {fileID: -4563521760573403211}
+  - {fileID: 6429938980036732425}
+  - {fileID: 7437798772015435209}
+  - {fileID: -2524088446762838456}
+  - {fileID: -2355516327735135001}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 1
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6429938980036732425
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: keyboard_click4_{6429938980036732425}
+  m_AudioClip: {fileID: 8300000, guid: b8040cee067e19f438579035d3b31818, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &7437798772015435209
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: keyboard_click5_{7437798772015435209}
+  m_AudioClip: {fileID: 8300000, guid: c9de5ef38d31c6048bdd3eb2725420b6, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
