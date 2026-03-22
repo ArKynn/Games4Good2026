@@ -11965,6 +11965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _passengerController: {fileID: 1502455011}
+  _passengerIdentities: {fileID: 681048141}
 --- !u!1 &1259876159
 GameObject:
   m_ObjectHideFlags: 0
