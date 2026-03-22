@@ -27315,9 +27315,9 @@ MonoBehaviour:
   delayBetweenTracks: 0.5
   fadeOutDuration: 0.4
   fadeInDuration: 0.5
-  buttonRenderer: {fileID: 0}
-  onMaterial: {fileID: 0}
-  offMaterial: {fileID: 0}
+  buttonRenderer: {fileID: 56663938}
+  onMaterial: {fileID: 2100000, guid: 613a99523abdbef4a9d3bdfdcc6a1715, type: 2}
+  offMaterial: {fileID: 2100000, guid: 962c31fa475a2a5498cfc429f9dfbd52, type: 2}
 --- !u!33 &5906949245335049289
 MeshFilter:
   m_ObjectHideFlags: 0
