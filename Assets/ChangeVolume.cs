@@ -19,7 +19,7 @@ public class ChangeVolume : MonoBehaviour
 
     public void VolumeUp()
     {
-        if (audioSource.volume < 1)
+        if (audioSource.volume < 2)
         {
             audioSource.volume += 0.1f;
         }

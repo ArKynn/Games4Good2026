@@ -3,6 +3,7 @@ using PassengerScripts;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
+using DG.Tweening;
 
 public class PassportController : MonoBehaviour
 {
@@ -25,7 +26,14 @@ public class PassportController : MonoBehaviour
         _strikeManager = FindFirstObjectByType<StrikeManager>();
         _passengerController.SpawnWaypoint.OnWaypointEnter += OnNewPassenger;
         _passengerController.CheckpointWaypoint.OnWaypointEnter += OnPassengerWaiting;
+        _passengerController.CheckpointWaypoint.OnWaypointEnter += PassengerLookAtPlayer;
         _passengerController.CheckpointWaypoint.OnWaypointExit += OnPassengerExit;
+    }
+
+        private void PassengerLookAtPlayer(object sender, EventArgs e)
+    {
+        //passenger looks towards the camera on the Y axis
+        _waitingPassenger.transform.DOLookAt(new Vector3(Camera.main.transform.position.x, _waitingPassenger.transform.position.y, Camera.main.transform.position.z), 0.5f).SetEase(Ease.InOutSine);
     }
 
     private void OnNewPassenger(object sender, EventArgs e)
