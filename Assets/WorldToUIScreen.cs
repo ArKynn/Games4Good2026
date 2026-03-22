@@ -24,6 +24,9 @@ public class WorldToUIScreen : MonoBehaviour
 
     private GameObject _lastHoveredObject;
 
+    [SerializeField] private Button playButton;
+    [SerializeField] private Button exitButton;
+
     private void LateUpdate() // Use LateUpdate to stop "vibrating" cursor
     {
         if (!active) return;
@@ -42,6 +45,10 @@ public class WorldToUIScreen : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f, screenLayer))
         {
+
+            playButton.enabled = true;
+            exitButton.enabled = true;
+
             if (hit.collider.transform == this.transform)
             {
                 // Remove Lerp entirely for zero delay
@@ -60,6 +67,11 @@ public class WorldToUIScreen : MonoBehaviour
                         virtualCursor.gameObject.SetActive(true);
                 }
             }
+        }
+        else
+        {
+            playButton.enabled = false;
+            exitButton.enabled = false;
         }
     }
 

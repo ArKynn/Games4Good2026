@@ -3119,6 +3119,8 @@ MonoBehaviour:
   uiCamera: {fileID: 2049483098}
   canvasRect: {fileID: 799448286}
   virtualCursor: {fileID: 362001377}
+  playButton: {fileID: 76060166}
+  exitButton: {fileID: 593831442}
 --- !u!1 &397293284
 GameObject:
   m_ObjectHideFlags: 0
