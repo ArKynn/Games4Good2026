@@ -177,11 +177,12 @@ public class SuitcaseMinigame : MonoBehaviour
         }
     }
 
-    public void SpawnSuitCase()
+    public void SpawnSuitCase(Material material = null)
     {
         print("suit spawn");
         SuitCase spawnedCase = Instantiate(suitCase, suitCaseSpawnPos.position, Quaternion.identity);
         spawnedCase.transform.eulerAngles = new Vector3(0, 90f, 0);
+        if(material  != null) spawnedCase.GetComponentInChildren<SkinnedMeshRenderer>().material = material;
 
         currentCase = spawnedCase;
 

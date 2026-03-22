@@ -26,6 +26,10 @@ public class RadioMusicController : MonoBehaviour
     private readonly List<int> playedHistory = new List<int>();
     private int historyPosition = -1;
 
+    [SerializeField] private Renderer buttonRenderer;
+    [SerializeField] private Material onMaterial;
+    [SerializeField] private Material offMaterial;
+
     private void Awake()
     {
         if (audioSource == null)
@@ -70,6 +74,11 @@ public class RadioMusicController : MonoBehaviour
                 PlayRandomTrack(addToHistory: true);
             else
                 PlayTrackByIndex(0, addToHistory: true);
+        }
+
+        if (buttonRenderer != null && onMaterial != null && offMaterial != null)
+        {
+            buttonRenderer.material = isRadioOn ? onMaterial : offMaterial;
         }
     }
 

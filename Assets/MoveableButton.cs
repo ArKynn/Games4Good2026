@@ -1,5 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
+
 
 public class MoveableButton : MonoBehaviour
 {
@@ -10,14 +12,19 @@ public class MoveableButton : MonoBehaviour
     [SerializeField] private Ease pressEase = Ease.InQuad;
     [SerializeField] private Ease releaseEase = Ease.OutQuad;
 
+
+    public UnityEvent onPress;
+    public int buttonID;
+
     [Header("Input Settings")]
     [SerializeField] private bool usesKey = false;
     // Just type the key name here (e.g., "w", "space", "f")
     [SerializeField] private string keyName = "w";
 
     private KeyCode _calculatedKey;
-    private Vector3 _startLocalPos;
+    private Vector3 _startLocalPos;//
     private bool _isAnimating = false;
+
 
     void Awake()
     {
@@ -76,6 +83,11 @@ public class MoveableButton : MonoBehaviour
         if (_isAnimating) return;
 
         _isAnimating = true;
+
+        if(onPress != null)
+        {
+            onPress.Invoke();
+        }
 
         Sequence buttonSeq = DOTween.Sequence();
         buttonSeq.Append(transform.DOLocalMove(_startLocalPos + moveOffset, pressDuration).SetEase(pressEase));

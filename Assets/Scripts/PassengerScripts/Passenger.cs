@@ -6,6 +6,7 @@ public class Passenger : MonoBehaviour
     [SerializeField] private GameObject _passportHolder;
     [SerializeField] private GameObject _luggageHolder;
     public GameObject PassportHolder => _passportHolder;
+    public GameObject LuggageHolder => _luggageHolder;
     public GameObject modelPrefab;
     private PassengerAgentController _agentController;
     private float _patience = 0;
@@ -68,8 +69,9 @@ public class Passenger : MonoBehaviour
         IsPassportCorrect = isCorrect;
     }
 
-    public void AddLuggage(GameObject luggage)
+    public void AddLuggage(GameObject luggage, Material luggageMaterial)
     {
-        Instantiate(luggage, _luggageHolder.transform);
+        var temp = Instantiate(luggage, _luggageHolder.transform);
+        temp.GetComponentInChildren<SkinnedMeshRenderer>().material = luggageMaterial;
     }
 }
