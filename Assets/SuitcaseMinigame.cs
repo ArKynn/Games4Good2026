@@ -34,18 +34,26 @@ public class SuitcaseMinigame : MonoBehaviour
     public SuitCase CurrentCase => currentCase;
     [SerializeField] private Transform suitCaseSpawnPos;
 
+    [Header("Puff Effect")]
     [SerializeField] private GameObject puffEffect;
+
+    [Header("Puff Sound")]
+    [SerializeField] private AudioSource puffAudioSource;
+    [SerializeField] private AudioClip puffClip;
+    [SerializeField] private float puffVolume = 1f;
 
     private SuitcaseController _suitcaseController;
 
     void Start()
     {
         _suitcaseController = FindFirstObjectByType<SuitcaseController>();
+
+        if (puffAudioSource == null)
+            puffAudioSource = GetComponent<AudioSource>();
     }
 
     public void ActivateGame(bool toggle)
     {
-        
         if (toggle)
         {
             FirstPersonViewport.Instance.minigameActive = true;
@@ -70,6 +78,7 @@ public class SuitcaseMinigame : MonoBehaviour
             active = toggle;
             FirstPersonViewport.Instance.minigameActive = false;
             Release();
+
             if (instructionsUI != null)
             {
                 instructionsUI.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
@@ -77,6 +86,7 @@ public class SuitcaseMinigame : MonoBehaviour
                     instructionsUI.SetActive(false);
                 });
             }
+
             Camera.main.transform.DOMove(originalCameraPosition, 0.5f).SetEase(Ease.InBack);
             Camera.main.transform.DORotate(originalCameraRotation.eulerAngles, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
             {
@@ -85,34 +95,33 @@ public class SuitcaseMinigame : MonoBehaviour
         }
     }
 
-
     public void DecreaseBadItem()
     {
         if (currentCase != null)
         {
             currentCase.numberOfBadItems -= 1;
-            if(currentCase.numberOfBadItems <= 0)
+            if (currentCase.numberOfBadItems <= 0)
             {
                 currentCase.numberOfBadItems = 0;
                 Debug.Log("No more bad items");
             }
         }
-
     }
+
     public void CheckCurrentCase()
     {
         if (currentCase != null)
         {
-            if(currentCase.CheckCase())
+            if (currentCase.CheckCase())
             {
                 Debug.Log("Case passed! Proceeding to next case...");
             }
             else
             {
                 Debug.Log("Case failed! Try again.");
-
                 _suitcaseController.ErrorHandlingCase();
             }
+
             _suitcaseController.DoneInspectingCase();
             StartDespawnCase();
         }
@@ -120,18 +129,25 @@ public class SuitcaseMinigame : MonoBehaviour
 
     public void StartDespawnCase()
     {
-        if (puffEffect)
+        if (puffEffect && currentCase != null)
         {
             currentCase.CheckCase();
-            // 1. Scale the current case to zero
+
             currentCase.transform.DOScale(Vector3.one * 0.1f, 0.5f).SetEase(Ease.InBack).OnComplete(() =>
             {
-                // 2. This code runs exactly when the case is tiny/gone
+                Vector3 puffPosition = currentCase.transform.position + new Vector3(0f, 0.25f, 0f);
 
-                // Spawn the puff effect
-                GameObject puff = Instantiate(puffEffect, currentCase.transform.position + new Vector3(0f, 0.25f, 0f), Quaternion.identity);
+                // Spawn puff effect
+                Instantiate(puffEffect, puffPosition, Quaternion.identity);
 
-                // Destroy the old case so it's gone from the hierarchy
+                // Play puff / explosion sound
+                if (puffAudioSource != null && puffClip != null)
+                {
+                    puffAudioSource.pitch = Random.Range(0.95f, 1.05f);
+                    puffAudioSource.PlayOneShot(puffClip, puffVolume);
+                }
+
+                // Destroy old case
                 Destroy(currentCase.gameObject);
             });
         }
@@ -173,6 +189,7 @@ public class SuitcaseMinigame : MonoBehaviour
         {
             ActivateGame(true);
         });
+
         spawnedCase.SpawnSuitCase(suitCaseSpawnPos.position);
     }
 
@@ -181,13 +198,9 @@ public class SuitcaseMinigame : MonoBehaviour
         if (active && _grabbedRb != null)
         {
             if (_isRotating)
-            {
                 HandleRotation();
-            }
             else
-            {
                 HandlePhysicsDrag();
-            }
         }
     }
 
@@ -210,7 +223,6 @@ public class SuitcaseMinigame : MonoBehaviour
                 _dragDepth = Vector3.Distance(Camera.main.transform.position, hit.point);
                 _grabOffset = _grabbedRb.transform.position - hit.point;
 
-                // --- GRAVITY DISABLED HERE ---
                 _grabbedRb.useGravity = false;
                 _grabbedRb.linearDamping = damping;
                 _grabbedRb.angularDamping = damping;
@@ -246,13 +258,10 @@ public class SuitcaseMinigame : MonoBehaviour
     {
         if (_grabbedRb != null)
         {
-            // --- GRAVITY RE-ENABLED HERE ---
             _grabbedRb.useGravity = true;
-
             _grabbedRb.linearDamping = 0.05f;
             _grabbedRb.angularDamping = 0.05f;
 
-            // Optional: Freeze the Case Lead if it's sitting still to prevent jitters
             if (_grabbedRb.linearVelocity.magnitude < 0.5f && _isCaseLead)
             {
                 _grabbedRb.linearVelocity = Vector3.zero;
