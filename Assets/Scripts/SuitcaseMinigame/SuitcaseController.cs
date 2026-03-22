@@ -1,11 +1,14 @@
 using System;
 using PassengerScripts;
 using UnityEngine;
+using Random = System.Random;
 
 public class SuitcaseController : MonoBehaviour
 {
     [SerializeField] private AllPassengerController _passengerController;
     [SerializeField] private PassengerIdentities _passengerIdentities;
+    [SerializeField] private Material[] _suitcaseMaterials;
+    [SerializeField] private GameObject _luggagePrefab;
     private Passenger _waitingPassenger;
     private PassengerAgentController _waitingPassengerController;
     private StrikeManager _strikeManager;
@@ -25,13 +28,14 @@ public class SuitcaseController : MonoBehaviour
         Passenger passenger = _passengerController.SpawnWaypoint.ConnectedAgentController.Passenger;
         passenger.modelPrefab = _passengerIdentities.GetRandomIdentity();
         Instantiate(passenger.modelPrefab, passenger.transform);
+        GetRandomSuitcase(passenger);
     }
 
     private void OnPassengerWaiting(object sender, EventArgs e)
     {
         _waitingPassengerController = _passengerController.CheckpointWaypoint.ConnectedAgentController;
         _waitingPassenger = _waitingPassengerController.GetComponent<Passenger>();
-        _suitcaseMinigame.SpawnSuitCase();
+        _suitcaseMinigame.SpawnSuitCase(_waitingPassenger.LuggageHolder.GetComponentInChildren<SkinnedMeshRenderer>().material);
     }
 
     private void OnPassengerExit(object sender, EventArgs e)
@@ -59,6 +63,11 @@ public class SuitcaseController : MonoBehaviour
     {
         _waitingPassengerController = null;
         _waitingPassenger = null;
+    }
+
+    private void GetRandomSuitcase(Passenger passenger)
+    {
+        passenger.AddLuggage(_luggagePrefab ,_suitcaseMaterials[UnityEngine.Random.Range(0, _suitcaseMaterials.Length)]);
     }
 
 }

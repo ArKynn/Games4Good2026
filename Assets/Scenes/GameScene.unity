@@ -4430,8 +4430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199693b89f0142a987b95fa1e9731e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _luggagePrefab: {fileID: 0}
-  giveLuggages: 0
   _passengerPrefab: {fileID: 4371018076328683132, guid: d1667f3f6e143f44ba1b0c52d9b892b7, type: 3}
   _spawnWaypoint: {fileID: 1931052831}
   _lineWaypoints:
@@ -12231,6 +12229,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _passengerController: {fileID: 1502455011}
   _passengerIdentities: {fileID: 681048141}
+  _suitcaseMaterials:
+  - {fileID: 2100000, guid: 5f40ce67ec5199c4ba33efa3faccd91b, type: 2}
+  - {fileID: 2100000, guid: b2599d619a9385940a6089da43d1cdd8, type: 2}
+  - {fileID: 2100000, guid: 0c0495e3014e04f4e83e56d8ae020d9b, type: 2}
+  - {fileID: 2100000, guid: 8c188c27d1bcd58458be9913483a5194, type: 2}
+  - {fileID: 2100000, guid: c9440363d961cae458c4acda9b5a3a4a, type: 2}
+  - {fileID: 2100000, guid: 0a78b8be78ad88443bea8e53b6cd0c97, type: 2}
+  _luggagePrefab: {fileID: 7047435167201822023, guid: 6023550eacd5dbd40b3424811f79db6c, type: 3}
 --- !u!1 &1259876159
 GameObject:
   m_ObjectHideFlags: 0
@@ -14790,8 +14796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199693b89f0142a987b95fa1e9731e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _luggagePrefab: {fileID: 7047435167201822023, guid: 6023550eacd5dbd40b3424811f79db6c, type: 3}
-  giveLuggages: 1
   _passengerPrefab: {fileID: 4371018076328683132, guid: d1667f3f6e143f44ba1b0c52d9b892b7, type: 3}
   _spawnWaypoint: {fileID: 154564017}
   _lineWaypoints:
