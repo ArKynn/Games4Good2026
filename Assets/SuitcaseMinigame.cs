@@ -44,12 +44,15 @@ public class SuitcaseMinigame : MonoBehaviour
 
     private SuitcaseController _suitcaseController;
 
+    [SerializeField] private ScaleUI tutorialUI;
+    private bool firstTimeTutorial = false;
+
     void Start()
     {
         _suitcaseController = FindFirstObjectByType<SuitcaseController>();
 
         if (puffAudioSource == null)
-            puffAudioSource = GetComponent<AudioSource>();
+            puffAudioSource = GetComponent<AudioSource>();//
     }
 
     public void ActivateGame(bool toggle)
@@ -69,6 +72,13 @@ public class SuitcaseMinigame : MonoBehaviour
                     instructionsUI.SetActive(true);
                     instructionsUI.transform.localScale = Vector3.zero;
                     instructionsUI.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
+                }
+
+                if (!firstTimeTutorial)
+                {
+                    tutorialUI.gameObject.SetActive(true);
+                    tutorialUI.ScaleUp();
+                    firstTimeTutorial = true;
                 }
             });
             Camera.main.transform.DORotate(cameraPosition.eulerAngles, 0.5f).SetEase(Ease.OutBack);
