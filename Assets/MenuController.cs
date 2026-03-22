@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
+using UnityEngine.UI;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -15,6 +17,9 @@ public partial class MenuController : MonoBehaviour
     [Header("Events")]
     public UnityEvent onPlayConfirmed;
 
+    [SerializeField] private Button playButton;
+    [SerializeField] private Button quitButton;
+
     /// <summary>
     /// Descales the menu panel and then triggers the Play event.
     /// </summary>
@@ -26,6 +31,9 @@ public partial class MenuController : MonoBehaviour
             onPlayConfirmed?.Invoke();
             return;
         }
+
+        if(playButton != null) playButton.interactable = false;
+        if (quitButton != null) quitButton.interactable = false;
 
         // Scale down to zero
         menuPanel.DOScale(Vector3.zero, shrinkDuration)
