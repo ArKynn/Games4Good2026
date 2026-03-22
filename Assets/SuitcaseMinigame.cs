@@ -165,7 +165,7 @@ public class SuitcaseMinigame : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && active)
+        if (Input.GetKeyDown(KeyCode.Q) && active && !tutorialUI.gameObject.activeSelf)
         {
             ActivateGame(false);
         }
