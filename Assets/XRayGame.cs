@@ -93,6 +93,8 @@ public class XRayGame : MonoBehaviour
     [SerializeField] private SpriteRenderer caseForeground;
     [SerializeField] private Sprite[] caseForegrounds;
 
+    [SerializeField] private AlarmCycle[] alarmCycle;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -172,6 +174,12 @@ public class XRayGame : MonoBehaviour
     public void StartMovingCase()
     {
         buttonClicked = false;
+
+        foreach (AlarmCycle alarm in alarmCycle)
+        {
+            alarm.StartAlarm();
+        }
+
         bool wrongCase = Random.value < wrongCaseChance;
 
         isWrong = wrongCase;
