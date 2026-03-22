@@ -17,18 +17,20 @@ public class RadioMusicController : MonoBehaviour
     [SerializeField] private float fadeOutDuration = 0.4f;
     [SerializeField] private float fadeInDuration = 0.5f;
 
+    [Header("Power Button Visual")]
+    [SerializeField] private Renderer buttonRenderer;
+    [SerializeField] private Material onMaterial;
+    [SerializeField] private Material offMaterial;
+
     private int currentIndex = -1;
     private Coroutine playRoutine;
     private float originalVolume;
     private bool isRadioOn = true;
 
-    // Keeps history so PreviousTrack still works even in random mode
     private readonly List<int> playedHistory = new List<int>();
     private int historyPosition = -1;
 
-    [SerializeField] private Renderer buttonRenderer;
-    [SerializeField] private Material onMaterial;
-    [SerializeField] private Material offMaterial;
+    private bool isTransitioning = false;
 
     private void Awake()
     {
@@ -40,12 +42,35 @@ public class RadioMusicController : MonoBehaviour
 
     private void Start()
     {
-        if (tracks.Length > 0)
+        UpdateButtonVisual();
+
+        if (tracks.Length > 0 && isRadioOn)
         {
             if (randomPlayback)
                 PlayRandomTrack(addToHistory: true);
             else
                 PlayTrackByIndex(0, addToHistory: true);
+        }
+    }
+
+    private void Update()
+    {
+        if (!isRadioOn)
+            return;
+
+        if (tracks == null || tracks.Length == 0)
+            return;
+
+        if (isTransitioning)
+            return;
+
+        // Song finished naturally -> automatically play next
+        if (!audioSource.isPlaying && audioSource.clip != null)
+        {
+            if (randomPlayback)
+                PlayRandomTrack(addToHistory: true);
+            else
+                PlayTrackByIndex(currentIndex + 1, addToHistory: true);
         }
     }
 
@@ -65,9 +90,11 @@ public class RadioMusicController : MonoBehaviour
             isRadioOn = true;
 
             if (tracks.Length == 0)
+            {
+                UpdateButtonVisual();
                 return;
+            }
 
-            // Resume current if valid, otherwise start fresh
             if (currentIndex >= 0 && currentIndex < tracks.Length)
                 PlayTrackByIndex(currentIndex, addToHistory: false);
             else if (randomPlayback)
@@ -76,10 +103,7 @@ public class RadioMusicController : MonoBehaviour
                 PlayTrackByIndex(0, addToHistory: true);
         }
 
-        if (buttonRenderer != null && onMaterial != null && offMaterial != null)
-        {
-            buttonRenderer.material = isRadioOn ? onMaterial : offMaterial;
-        }
+        UpdateButtonVisual();
     }
 
     public void NextTrack()
@@ -87,7 +111,6 @@ public class RadioMusicController : MonoBehaviour
         if (!isRadioOn || tracks.Length == 0)
             return;
 
-        // If user had gone back in history, moving next should go forward in that history first
         if (historyPosition >= 0 && historyPosition < playedHistory.Count - 1)
         {
             historyPosition++;
@@ -145,7 +168,6 @@ public class RadioMusicController : MonoBehaviour
 
         if (addToHistory)
         {
-            // If user had gone back, remove "future" history before adding a new branch
             if (historyPosition < playedHistory.Count - 1)
             {
                 playedHistory.RemoveRange(historyPosition + 1, playedHistory.Count - historyPosition - 1);
@@ -163,6 +185,8 @@ public class RadioMusicController : MonoBehaviour
 
     private IEnumerator PlayWithFade(int trackIndex)
     {
+        isTransitioning = true;
+
         float t = 0f;
         float startVolume = audioSource.volume;
 
@@ -179,7 +203,10 @@ public class RadioMusicController : MonoBehaviour
         yield return new WaitForSeconds(delayBetweenTracks);
 
         if (!isRadioOn)
+        {
+            isTransitioning = false;
             yield break;
+        }
 
         audioSource.clip = tracks[trackIndex];
         audioSource.Play();
@@ -193,10 +220,13 @@ public class RadioMusicController : MonoBehaviour
         }
 
         audioSource.volume = originalVolume;
+        isTransitioning = false;
     }
 
     private IEnumerator FadeOutAndStop()
     {
+        isTransitioning = true;
+
         float t = 0f;
         float startVolume = audioSource.volume;
 
@@ -209,5 +239,14 @@ public class RadioMusicController : MonoBehaviour
 
         audioSource.volume = 0f;
         audioSource.Stop();
+        isTransitioning = false;
+    }
+
+    private void UpdateButtonVisual()
+    {
+        if (buttonRenderer != null && onMaterial != null && offMaterial != null)
+        {
+            buttonRenderer.material = isRadioOn ? onMaterial : offMaterial;
+        }
     }
 }
