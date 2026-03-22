@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class StrikeManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class StrikeManager : MonoBehaviour
     [SerializeField] private Renderer[] strike3;
 
     private Renderer[][] strikeRenderers;
+    
+    public UnityEvent onStrike;
 
     private void Start()
     {
@@ -29,6 +32,7 @@ public class StrikeManager : MonoBehaviour
             }
 
         currentStrikes++;
+        onStrike?.Invoke();
         if (currentStrikes >= maxStrikes) LoseGame();
         else print($"Error made! {currentStrikes} out of  {maxStrikes} strikes!");
     }
