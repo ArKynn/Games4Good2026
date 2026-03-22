@@ -47,7 +47,7 @@ Material:
     m_Floats:
     - _ColorMask: 15
     - _Invert: 1
-    - _MaskScale: 4.72
+    - _MaskScale: 1
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
