@@ -14,16 +14,18 @@ public class XRayGame : MonoBehaviour
 
     private bool buttonClicked = true;
 
-   
-       
 
+    [SerializeField] private ScaleUI tutorialUI;
+    private bool firstTimeTutorial = false;
 
     public void ActivateGame(bool toggle)
     {
-        if(!toggle)
-        {
-            FirstPersonViewport.Instance.SetMovementActive(true);
-        }
+
+
+
+
+
+        FirstPersonViewport.Instance.SetMovementActive(!toggle);
 
         // Make the vision cone increase from 0 to the original size if its to activate the game, and vice versa
         if (toggle)
@@ -40,6 +42,13 @@ public class XRayGame : MonoBehaviour
                     instructionsUI.SetActive(true);
                     instructionsUI.transform.localScale = Vector3.zero;
                     instructionsUI.transform.DOScale(instructionsOriginalScale, 0.5f).SetEase(Ease.OutBack);
+                }
+
+                if(!firstTimeTutorial)
+                {
+                    tutorialUI.gameObject.SetActive(true);
+                    tutorialUI.ScaleUp();
+                    firstTimeTutorial = true;
                 }
             };
             Camera.main.transform.DORotate(cameraPosition.eulerAngles, 0.5f).SetEase(Ease.OutBack);
@@ -112,7 +121,7 @@ public class XRayGame : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Q) && active)
+        if(Input.GetKeyDown(KeyCode.Q) && active && !tutorialUI.gameObject.activeSelf)
         {
             ActivateGame(false);
         }

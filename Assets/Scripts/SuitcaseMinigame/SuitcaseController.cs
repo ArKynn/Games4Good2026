@@ -40,6 +40,7 @@ public class SuitcaseController : MonoBehaviour
         _waitingPassenger = _waitingPassengerController.GetComponent<Passenger>();
         _suitcaseMinigame.SpawnSuitCase(_waitingPassenger.LuggageHolder.GetComponentInChildren<SkinnedMeshRenderer>().material);
         onNewCase?.Invoke();
+        _waitingPassenger.LuggageHolder.SetActive(false);
     }
 
     private void OnPassengerExit(object sender, EventArgs e)
