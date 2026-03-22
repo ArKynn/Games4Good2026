@@ -48,6 +48,7 @@ public class PassportController : MonoBehaviour
 
     private void ClearWaitingPassenger()
     {
+        HidePassport();
         _waitingPassengerController = null;
         _waitingPassenger = null;
     }
@@ -85,10 +86,11 @@ public class PassportController : MonoBehaviour
     private void ShowPassport()
     {
         onNewPassport?.Invoke();
+        _waitingPassenger.Passport.transform.parent.gameObject.SetActive(true);
     }
     
     private void HidePassport()
     {
-        
+        _waitingPassenger.Passport.transform.parent.gameObject.SetActive(false);
     }
 }
