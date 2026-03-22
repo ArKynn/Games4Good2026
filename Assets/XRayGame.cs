@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class XRayGame : MonoBehaviour
 {
@@ -7,9 +8,15 @@ public class XRayGame : MonoBehaviour
     private Vector3 originalCameraPosition;
     public bool active;
     [SerializeField] private GameObject instructionsUI;
+    private Vector3 instructionsOriginalScale;
     private StrikeManager _strikeManager;
 
     private bool buttonClicked = false;
+
+   
+       
+
+
     public void ActivateGame(bool toggle)
     {
         
@@ -34,7 +41,7 @@ public class XRayGame : MonoBehaviour
                     active = toggle;
                     instructionsUI.SetActive(true);
                     instructionsUI.transform.localScale = Vector3.zero;
-                    instructionsUI.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
+                    instructionsUI.transform.DOScale(instructionsOriginalScale, 0.5f).SetEase(Ease.OutBack);
                 }
             };
             Camera.main.transform.DORotate(cameraPosition.eulerAngles, 0.5f).SetEase(Ease.OutBack);
@@ -94,8 +101,9 @@ public class XRayGame : MonoBehaviour
     {
         _strikeManager = FindFirstObjectByType<StrikeManager>();
         originalVisionConeScale = visionCone.localScale;
+        instructionsOriginalScale = instructionsUI.transform.localScale;
         visionCone.localScale = Vector3.zero; // Start with the vision cone hidden
-        StartMovingCase();
+
     }
 
     [SerializeField] private float movementSpeed = 5f;
