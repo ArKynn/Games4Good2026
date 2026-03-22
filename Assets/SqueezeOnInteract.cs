@@ -33,6 +33,11 @@ public class SqueezeOnInteract : MonoBehaviour
     [SerializeField] private GameObject celebrationEffect;
     [SerializeField] private Transform effectSpawnPoint;
 
+    [Header("Explosion Sound")]
+    [SerializeField] private AudioSource explosionAudioSource;
+    [SerializeField] private AudioClip explosionClip;
+    [SerializeField] private float explosionVolume = 1f;
+
     [Header("Explosion Squeeze")]
     [SerializeField] private Vector3 finalPunch = new Vector3(0.35f, -0.5f, 0.35f);
     [SerializeField] private float finalPunchDuration = 0.16f;
@@ -87,7 +92,6 @@ public class SqueezeOnInteract : MonoBehaviour
         float timeSinceLast = Time.time - lastInteractTime;
         bool isFastEnough = timeSinceLast <= maxGapBetweenFastPresses;
 
-        // First press or too slow: restart chain
         if (fastPressCount == 0 || !isFastEnough)
         {
             ResetComboState(false);
@@ -99,7 +103,6 @@ public class SqueezeOnInteract : MonoBehaviour
             return;
         }
 
-        // Still fast enough
         fastPressCount++;
         lastInteractTime = Time.time;
 
@@ -109,7 +112,6 @@ public class SqueezeOnInteract : MonoBehaviour
             comboFailRoutine = null;
         }
 
-        // Still in safe detection phase
         if (!isInDeformPhase)
         {
             if (fastPressCount >= rapidPressesBeforeDeform)
@@ -124,7 +126,6 @@ public class SqueezeOnInteract : MonoBehaviour
             return;
         }
 
-        // Already deforming and counting
         deformPhasePressCount++;
 
         if (deformPhasePressCount >= interactionsNeeded)
@@ -227,8 +228,6 @@ public class SqueezeOnInteract : MonoBehaviour
 
         KillScaleTweens();
 
-        // Do NOT snap back to original scale here.
-        // Start the final punch from the current deformed state.
         currentTween = targetVisual.DOPunchScale(
             finalPunch,
             finalPunchDuration,
@@ -238,8 +237,16 @@ public class SqueezeOnInteract : MonoBehaviour
         {
             targetVisual.localScale = originalScale;
 
+            // 💥 Spawn explosion visual
             if (celebrationEffect != null)
                 Instantiate(celebrationEffect, effectSpawnPoint.position, Quaternion.identity);
+
+            // 🔊 Play explosion sound
+            if (explosionAudioSource != null && explosionClip != null)
+            {
+                explosionAudioSource.pitch = Random.Range(0.9f, 1.1f); // optional variation
+                explosionAudioSource.PlayOneShot(explosionClip, explosionVolume);
+            }
 
             StartCoroutine(RespawnRoutine());
         });
@@ -270,18 +277,12 @@ public class SqueezeOnInteract : MonoBehaviour
         if (visualObjectsToHide != null && visualObjectsToHide.Length > 0)
         {
             foreach (GameObject obj in visualObjectsToHide)
-            {
-                if (obj != null)
-                    obj.SetActive(false);
-            }
+                if (obj != null) obj.SetActive(false);
         }
         else
         {
             foreach (Renderer rend in allRenderers)
-            {
-                if (rend != null)
-                    rend.enabled = false;
-            }
+                if (rend != null) rend.enabled = false;
         }
     }
 
@@ -290,28 +291,19 @@ public class SqueezeOnInteract : MonoBehaviour
         if (visualObjectsToHide != null && visualObjectsToHide.Length > 0)
         {
             foreach (GameObject obj in visualObjectsToHide)
-            {
-                if (obj != null)
-                    obj.SetActive(true);
-            }
+                if (obj != null) obj.SetActive(true);
         }
         else
         {
             foreach (Renderer rend in allRenderers)
-            {
-                if (rend != null)
-                    rend.enabled = true;
-            }
+                if (rend != null) rend.enabled = true;
         }
     }
 
     private void SetInteractionEnabled(bool enabled)
     {
         foreach (Collider col in allColliders)
-        {
-            if (col != null)
-                col.enabled = enabled;
-        }
+            if (col != null) col.enabled = enabled;
     }
 
     private void KillScaleTweens()
