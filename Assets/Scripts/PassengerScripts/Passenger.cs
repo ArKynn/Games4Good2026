@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Passenger : MonoBehaviour
 {
     [SerializeField] private GameObject _passportHolder;
     [SerializeField] private GameObject _luggageHolder;
+    public GameObject PassportHolder => _passportHolder;
+    public GameObject modelPrefab;
     private PassengerAgentController _agentController;
     private float _patience = 0;
     public float Patience => _patience;

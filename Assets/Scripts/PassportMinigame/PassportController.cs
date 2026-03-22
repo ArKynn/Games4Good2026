@@ -9,7 +9,8 @@ public class PassportController : MonoBehaviour
     [SerializeField] private AllPassengerController _passengerController;
     [SerializeField] private float _incorrectPassportChance = 0.5f;
     
-    private PassportGenerator passportGenerator;
+    private PassportGenerator _passportGenerator;
+    private PassengerIdentities _passengerIdentities;
     private Passenger _waitingPassenger;
     private PassengerAgentController _waitingPassengerController;
     private StrikeManager _strikeManager;
@@ -19,7 +20,8 @@ public class PassportController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        passportGenerator = GetComponent<PassportGenerator>();
+        _passportGenerator = GetComponent<PassportGenerator>();
+        _passengerIdentities = GetComponent<PassengerIdentities>();
         _strikeManager = FindFirstObjectByType<StrikeManager>();
         _passengerController.SpawnWaypoint.OnWaypointEnter += OnNewPassenger;
         _passengerController.CheckpointWaypoint.OnWaypointEnter += OnPassengerWaiting;
@@ -29,8 +31,10 @@ public class PassportController : MonoBehaviour
     private void OnNewPassenger(object sender, EventArgs e)
     {
         Passenger passenger = _passengerController.SpawnWaypoint.ConnectedAgentController.Passenger;
+        passenger.modelPrefab = _passengerIdentities.GetRandomIdentity();
+        Instantiate(passenger.modelPrefab, passenger.transform);
         bool isPassportCorrect = Random.value >= _incorrectPassportChance;
-        GameObject generatedPassport = passportGenerator.GenerateNewPassport(isPassportCorrect, passenger);
+        GameObject generatedPassport = _passportGenerator.GenerateNewPassport(isPassportCorrect, passenger);
         passenger.SetPassport(generatedPassport, isPassportCorrect);
     }
 
@@ -57,6 +61,7 @@ public class PassportController : MonoBehaviour
     {
         if (_waitingPassenger != null)
         {
+            
             _waitingPassengerController.GoToDespawn();
             _waitingPassenger.ToggleLosingPatience();
             CheckDecision(true, _waitingPassenger.IsPassportCorrect);
@@ -86,11 +91,13 @@ public class PassportController : MonoBehaviour
     private void ShowPassport()
     {
         onNewPassport?.Invoke();
-        _waitingPassenger.Passport.transform.parent.gameObject.SetActive(true);
+        _waitingPassenger.PassportHolder.SetActive(true);
     }
     
     private void HidePassport()
     {
-        _waitingPassenger.Passport.transform.parent.gameObject.SetActive(false);
+        if(_waitingPassenger == null) return;
+        var temp = _waitingPassenger.PassportHolder;
+        if(temp.activeSelf) temp.SetActive(false);
     }
 }
