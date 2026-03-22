@@ -14877,8 +14877,8 @@ MonoBehaviour:
   suitCase: {fileID: 3276174994456881472, guid: c3e405f4de1787f41bccedd798cdd1fe, type: 3}
   suitCaseSpawnPos: {fileID: 1193723630}
   puffEffect: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
-  puffAudioSource: {fileID: 0}
-  puffClip: {fileID: 0}
+  puffAudioSource: {fileID: 1281939671}
+  puffClip: {fileID: 8300000, guid: 596976c1b21155e498fe6e4c64b9ff0a, type: 3}
   puffVolume: 1
   dragForce: 10
   maxVelocity: 5

@@ -114,10 +114,22 @@ public class WorldToUIScreen : MonoBehaviour
 
     public void OnMouseClick()
     {
-        // For clicking, we use the EXACT current position of the virtual cursor 
-        // This ensures that if the user clicks while the cursor is still smoothing/moving, 
-        // the click happens where the visual cursor actually is.
-        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f, screenLayer))
+        {
+            if (hit.collider.transform != this.transform)
+            {
+                return;
+            }
+        }
+        else
+            return;
+
+            // For clicking, we use the EXACT current position of the virtual cursor 
+            // This ensures that if the user clicks while the cursor is still smoothing/moving, 
+            // the click happens where the visual cursor actually is.
+            PointerEventData pointerData = new PointerEventData(EventSystem.current);
         pointerData.position = virtualCursor.anchoredPosition;
 
         var results = new List<RaycastResult>();
@@ -128,6 +140,7 @@ public class WorldToUIScreen : MonoBehaviour
             Button button = result.gameObject.GetComponentInParent<Button>();
             if (button != null && button.interactable)
             {
+                Debug.Log($"Clicked on button: {button.gameObject.name}");
                 button.onClick.Invoke();
                 break;
             }
