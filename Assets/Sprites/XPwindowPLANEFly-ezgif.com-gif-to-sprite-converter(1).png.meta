@@ -1,0 +1,3442 @@
+fileFormatVersion: 2
+guid: 39b6230ac208ed94a8f3eaeb05f08c7b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869013a28eb380440aa6c7ca21ee610f
+      internalID: 897424274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296601bb03c036546be2c47a227b3fcc
+      internalID: 405539830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_2
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ba5625a401fb44eaee3570390df684
+      internalID: -296795423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_3
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3fd52ca4b61ff44859a3dd293be60c
+      internalID: 1284953185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_4
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2acb55a0ff1c734a94b2fb1114524ee
+      internalID: 1938128245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_5
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce73ad1d44a18d2489bc8990858ce5e1
+      internalID: -175514216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_6
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5149ebdc7cfa5764298bca9d310610a4
+      internalID: -110815153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_7
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d124d6b1047503a43b9f97c450ecc5f0
+      internalID: 390500699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_8
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8e7bee839ddef45819485c8c60bb0e
+      internalID: 1036515619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_9
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00a65b29ae3257408b02cbf19b30670
+      internalID: 1894768747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_10
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92430a1b3703564b86b850ebdcd9c87
+      internalID: 1837880700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_11
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 9526
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b64a398dcbc114479ce7c708e353885
+      internalID: -403510999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07764ba845a0df14789e9a5fde41ce7f
+      internalID: 521352090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_13
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e213d827a55a04a8486a4fff85d9a2
+      internalID: -1581808465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_14
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c906912c9f45602448a43f7a956cfa6c
+      internalID: 924322248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_15
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc2a84e7c89878418ea441ca864b759
+      internalID: 1730637227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_16
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee99d727ce17434397fb073a935996f
+      internalID: 568108440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_17
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f4c3fec76141f44b393b24d5ac90ee
+      internalID: -39008958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_18
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2939e050212e1cf4cb350af7690a6b46
+      internalID: 586334402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_19
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bc30ce162dd7a499de609c2f3c3aad
+      internalID: 701104721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_20
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6b08a89347d0644b4e902de1b3ceb7
+      internalID: -1669069529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_21
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb579f2f8652064082f9cd7b959bd97
+      internalID: -1276928046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_22
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c2237bb7e03ed4d874f438807fc68b
+      internalID: 1095544145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_23
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 8660
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65be2a79ac39e7940aded40bacfdc1c3
+      internalID: 668237598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167863c19e6aff141867b4039f8e53aa
+      internalID: -96307256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_25
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bb085c73582124fb71c427803cbee2
+      internalID: 97522701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_26
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40611e9081306e4cb0036bfddb83da7
+      internalID: 1069448839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_27
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48ebd1435a84124ea0f5d28ccf52dc5
+      internalID: -1259034545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_28
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec93d85c44c5be743a38848c075f269b
+      internalID: -1200252699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_29
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa050bd9637e6b3439769216222e7b5c
+      internalID: -1946284151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_30
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dfbc2a2f0e142429075a154d7026ff
+      internalID: 1976775460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_31
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f612e0b39ff2ec41a2fe42af6a4088e
+      internalID: -500917334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_32
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fb97c3176988b4a92c576217e0f242
+      internalID: 326310929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_33
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b3250bbaad6f24890dc4f821cc51bc
+      internalID: -1318897155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_34
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a263b4217c0d244a7d62e527ddcd0e
+      internalID: -528079427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_35
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 7794
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625aa736637f07045a744eb0fb1212eb
+      internalID: 855414918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b965cd18a0d3c40a95d459a7edcfd1
+      internalID: -2084097831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_37
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fdfbc530d520d4eb7cae8bd743f80a
+      internalID: -166384542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_38
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6eca2f274070044baaf5fd870efe607
+      internalID: 507162819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_39
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88c8b6f063c85c4fb7c23671e0ffdfd
+      internalID: 1696433888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_40
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba9a3e02185a004b81bb659a1d38ac6
+      internalID: 1260599468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_41
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883af2f615b11e04999e0a98648026df
+      internalID: -1209314038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_42
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a65fbca47935e44e974149a252e096b
+      internalID: -1505918331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_43
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a01a8fcb5d40d14faa16fa40204dcb9
+      internalID: 324326138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_44
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4008bc31d286743bc334a52266c4d6
+      internalID: 297281151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_45
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ad1ceeed392624d8dc55349eaa412c
+      internalID: 712499313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_46
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a755e8c5b7acb41bd40f26e5b72826
+      internalID: -528827540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_47
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 6928
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9c22c6ec3bf4c4784fa2aa01ede679
+      internalID: 117070831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec6a5739cc108443856cbdba44c5988
+      internalID: -2023049055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_49
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764647ccbf0c551448216523d34d1f7d
+      internalID: 292447177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_50
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad18d3159b9777841b9a2ae55f94a07e
+      internalID: 438498035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_51
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb92095a1b131bd40a78f1e6598b746e
+      internalID: 1478159207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_52
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f009629d5a893459605b286e435907
+      internalID: 1367571670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_53
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb98cdce672485c469d6632c405621f0
+      internalID: -335238448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_54
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812a203165288104b94e4ce2415d5177
+      internalID: -1420772803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_55
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa7e60202b6d3a4bbf911139c1c3106
+      internalID: 46386900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_56
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da85e85de1d30b4d91d6f1cfed0f4b9
+      internalID: 1203211954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_57
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d642fa9496aab141bd9b59a4f22f21d
+      internalID: -265833984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_58
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c0d8212f5194245a8ba9c71663fb20
+      internalID: -645404234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_59
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 6062
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028baa946110d4543ac1c71790e2e15a
+      internalID: 540497776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb7605622d258b47a5c025147d0064a
+      internalID: -1864550794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_61
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b752e9c615d6b4eba457389d961129
+      internalID: 827616209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_62
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfcc1cab496eee9498373cd0b1ef98ef
+      internalID: -1684090251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_63
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65a784a583d3824bb6ccfae7ee09b94
+      internalID: 1998909031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_64
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3059a0757e5ee46af31bd561410c72
+      internalID: -789828800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_65
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320e738a317c55540939423cdf150dfe
+      internalID: 1623668025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_66
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717e8a2f78665ec4383a10bad46c4a49
+      internalID: -2092917378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_67
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfea2e120c867ca4f91192b2aed57e25
+      internalID: 1004362006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_68
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ebd88c18b0ac34697fcb542f90986e
+      internalID: -164952252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_69
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ff364dd1b524f46b4f339f81444466
+      internalID: 1103463245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_70
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50b9bf2a1625a1458a6d6a062092cfe
+      internalID: -600144337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_71
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 5196
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13b8ed6aad342146bc83e53b87db951
+      internalID: -1864551418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50541cdd81a1c1948bc5bfbc1326e9df
+      internalID: 255782568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_73
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd9e61b5dfe07f448d0bfba2e4efbe0
+      internalID: 1783499025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_74
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e3552eb401bac468a6390fd314cc34
+      internalID: -107959288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_75
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc612e6535318104ab555b94b8956525
+      internalID: 1771982805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_76
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bd8afc9a07b174b8b65bf6f08b149c
+      internalID: 1238232702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_77
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670273ffbb3d6264ba85fda66e158d9f
+      internalID: -1646446012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_78
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca390a486e96354bab8cffa9a91e9f5
+      internalID: 1642827360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_79
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7083bf1ed864e1499d1769e46c16c71
+      internalID: -92482816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_80
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27bfd2589b3e51b4a968f2bf68de7c23
+      internalID: 1140295791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_81
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37800e59e0b18ad4d9b3679ee7634ce6
+      internalID: 703730118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_82
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f499c0ac2d9f349824b214bcdb7d2f
+      internalID: -932222536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_83
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 4330
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eeb20fd626850842bde75cc20681a44
+      internalID: 1198602897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42de0dc983fe9ee4489c0ef0da9636ec
+      internalID: -1648978251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_85
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff97fed4c29b0324abd8525b9027b807
+      internalID: 84203612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_86
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb407dc1423c38468692d6cfa33ba6f
+      internalID: 1279650876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_87
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cff0eee25c2f6b4a801ccbbf503d9df
+      internalID: 643730097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_88
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11278bec9ab86949ab84aa7e1b0685a
+      internalID: -1855578250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_89
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f85f5506b480324b92e94072f0d7e8d
+      internalID: -387636635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_90
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de6189033cf87f4289f5f2fdfa036eb
+      internalID: -1540809882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_91
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ce28c1d0316614bbe412d1b0a28df1
+      internalID: -1175262855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_92
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303c9a9822f06c04d88601478241ce9d
+      internalID: -891344268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_93
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430c7ce15651c624d93a948095d903fd
+      internalID: 378493129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_94
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529e1c37f2717df4badbe37a6ecdc421
+      internalID: -849851169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_95
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 3464
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f482bac0a20f90349b3dd36464131532
+      internalID: -523468550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276733e49aada904ebe4d2ed35bafa0a
+      internalID: 1661977654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_97
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfbcb1042be7d64eb4cc857583cefe9
+      internalID: -763053099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_98
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75f198b9ff46344985999d34a884a57
+      internalID: -756101764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_99
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198e9039b10ecdf4b9aa2a30b8b37ceb
+      internalID: -29089894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_100
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6931b4171d8334246a6e56eb5041057d
+      internalID: -764517276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_101
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f51f6d5a50a3aa4e8e7bdda5bf611bd
+      internalID: -417268798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_102
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa4811895ce46a44984090178fceedc
+      internalID: -1647424272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_103
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d25473bd55aded4bac947e7e3947130
+      internalID: 1961469301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_104
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193563cad6bc305409ba4378aa25373a
+      internalID: -2014024374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_105
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd4478ecb56c1848baf34b046d72c8a
+      internalID: 1215543189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_106
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d7c48f7eaef1143814789e544a6b5a
+      internalID: -1324532044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_107
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 2598
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdab2959292b1c24db6071d8e37242b8
+      internalID: 840966625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86db0bde5260dbd4a8a1d8a5aecbb9a6
+      internalID: 1928139469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_109
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984f554b26571814bb34403b7ec43b42
+      internalID: 1776703287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_110
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73f40643e494944da09ac976b4535a0
+      internalID: -1571389370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_111
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8aa7269f8e6b16418284d78d23b1861
+      internalID: 170297299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_112
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5c83e1cd6432a4487fd217c4dda91a
+      internalID: 2019763642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_113
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8d912207a866543bcb93e01bfd1fe5
+      internalID: 1166338791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_114
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef8aadaac1dae449bcb822bedabe599
+      internalID: -402022400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_115
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f509661bf3a862c44bf8c54b92220da7
+      internalID: 685780737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_116
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2686a8ccde199b42b2142d2a67bb3c0
+      internalID: 2008928704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_117
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec5a5d729abdc543a21501c083c4a0d
+      internalID: 1253232690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_118
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246e9168380abd44c805dbacffa090eb
+      internalID: -579409142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_119
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 1732
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4206a57d421fb4942b42ed899b62f7f3
+      internalID: 74002723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7834b0ecdc6e2e4fa92231430fc2c1b
+      internalID: 1506532831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_121
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc44a6568d656744ad82bdb809688ae
+      internalID: 290507809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_122
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81f67ed91322a9448e2df38941d486b
+      internalID: 1057616626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_123
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635864761242b1c46b9b5612a63c6b50
+      internalID: -1367453941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_124
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3feb3fe5fb705743995d3931c847e46
+      internalID: 866333545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_125
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f6b7836a374c845bf12e3e7086f69a
+      internalID: -1265668976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_126
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d81db6346db0594293a1a8cb83f680c
+      internalID: 228161472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_127
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fc399856b4be641981be492f34fcac
+      internalID: 288511003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_128
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5406b67c9158c34494355d0ed860bdf
+      internalID: 1318596452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_129
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cfca29a096d5c449981c8bf48150cb
+      internalID: -1537669778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_130
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9acf36ce40e37e48b9769b20a010718
+      internalID: -66203792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_131
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 866
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5abcaffd490694cbc79a0fca1bdf87
+      internalID: -669742993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ea6d7d3df27ca46852d8a355412921
+      internalID: -1890674742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_133
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436af136e5e4dde4595c5fe49a42f4ad
+      internalID: -1513808174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_134
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2491a4e18c5ca154aa4de023d8da5a65
+      internalID: 1333184589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_135
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1246cb281e60c4e9b144b7ebf38f67
+      internalID: -2061815787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_136
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fa65f1835df0a46b08606807039ac2
+      internalID: -1148794206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_137
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb462f906196e8944883d62358a08253
+      internalID: -1181963301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_138
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad36bfdf0a5e62438ad994c7f170685
+      internalID: -951591909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_139
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57dccc11acf33824fb3c7e93189e6d89
+      internalID: -296065599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_140
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0f1b47bc6e9ca4cb833770784c8b23
+      internalID: 21518978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_141
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff8b6834bd0059458e6309222eaf178
+      internalID: -97635932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_142
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965dbfffd8b644b44afca09e370d464d
+      internalID: -740898721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_143
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 0
+        width: 800
+        height: 866
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec31f6ec6caf2747a07b5bf24b9e65f
+      internalID: -1769553086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: acccd720352c09343a0693c3174004a6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_0: 897424274
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_1: 405539830
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_10: 1837880700
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_100: -764517276
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_101: -417268798
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_102: -1647424272
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_103: 1961469301
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_104: -2014024374
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_105: 1215543189
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_106: -1324532044
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_107: 840966625
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_108: 1928139469
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_109: 1776703287
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_11: -403510999
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_110: -1571389370
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_111: 170297299
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_112: 2019763642
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_113: 1166338791
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_114: -402022400
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_115: 685780737
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_116: 2008928704
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_117: 1253232690
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_118: -579409142
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_119: 74002723
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_12: 521352090
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_120: 1506532831
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_121: 290507809
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_122: 1057616626
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_123: -1367453941
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_124: 866333545
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_125: -1265668976
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_126: 228161472
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_127: 288511003
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_128: 1318596452
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_129: -1537669778
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_13: -1581808465
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_130: -66203792
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_131: -669742993
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_132: -1890674742
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_133: -1513808174
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_134: 1333184589
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_135: -2061815787
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_136: -1148794206
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_137: -1181963301
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_138: -951591909
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_139: -296065599
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_14: 924322248
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_140: 21518978
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_141: -97635932
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_142: -740898721
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_143: -1769553086
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_15: 1730637227
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_16: 568108440
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_17: -39008958
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_18: 586334402
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_19: 701104721
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_2: -296795423
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_20: -1669069529
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_21: -1276928046
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_22: 1095544145
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_23: 668237598
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_24: -96307256
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_25: 97522701
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_26: 1069448839
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_27: -1259034545
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_28: -1200252699
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_29: -1946284151
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_3: 1284953185
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_30: 1976775460
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_31: -500917334
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_32: 326310929
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_33: -1318897155
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_34: -528079427
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_35: 855414918
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_36: -2084097831
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_37: -166384542
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_38: 507162819
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_39: 1696433888
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_4: 1938128245
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_40: 1260599468
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_41: -1209314038
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_42: -1505918331
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_43: 324326138
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_44: 297281151
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_45: 712499313
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_46: -528827540
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_47: 117070831
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_48: -2023049055
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_49: 292447177
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_5: -175514216
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_50: 438498035
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_51: 1478159207
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_52: 1367571670
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_53: -335238448
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_54: -1420772803
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_55: 46386900
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_56: 1203211954
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_57: -265833984
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_58: -645404234
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_59: 540497776
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_6: -110815153
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_60: -1864550794
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_61: 827616209
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_62: -1684090251
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_63: 1998909031
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_64: -789828800
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_65: 1623668025
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_66: -2092917378
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_67: 1004362006
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_68: -164952252
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_69: 1103463245
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_7: 390500699
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_70: -600144337
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_71: -1864551418
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_72: 255782568
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_73: 1783499025
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_74: -107959288
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_75: 1771982805
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_76: 1238232702
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_77: -1646446012
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_78: 1642827360
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_79: -92482816
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_8: 1036515619
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_80: 1140295791
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_81: 703730118
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_82: -932222536
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_83: 1198602897
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_84: -1648978251
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_85: 84203612
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_86: 1279650876
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_87: 643730097
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_88: -1855578250
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_89: -387636635
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_9: 1894768747
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_90: -1540809882
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_91: -1175262855
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_92: -891344268
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_93: 378493129
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_94: -849851169
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_95: -523468550
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_96: 1661977654
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_97: -763053099
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_98: -756101764
+      XPwindowPLANEFly-ezgif.com-gif-to-sprite-converter(1)_99: -29089894
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
